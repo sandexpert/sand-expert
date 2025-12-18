@@ -84,7 +84,7 @@ async function loadGallery() {
     if (!galleryContainer) return;
 
     try {
-        const res = await fetch('/api/gallery');
+        const res = await fetch('data/galleryData.json');
         if (!res.ok) throw new Error('Failed to load gallery');
         const images = await res.json();
 
@@ -290,3 +290,4 @@ function getCookie(name) {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
+
