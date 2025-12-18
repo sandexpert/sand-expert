@@ -1,0 +1,83 @@
+[
+  {
+    "id": 176599970818339200,
+    "title": "The Sbeiba Festival in Djanet (Illizi)",
+    "date": "2025-12-27",
+    "duration": 4,
+    "route": [
+      "El Oued",
+      "Touggourt",
+      "Ouargla",
+      "Illizi"
+    ],
+    "pricePerDay": 120,
+    "image": "assets/upcomingTrips_img/176599970818339206.webp",
+    "inclusions": [
+      "Accommodation",
+      "Transportation",
+      "Guided Activities",
+      "Meals and Beverages",
+      "Professional Tour Guides"
+    ],
+    "description": "<p>The Sbeiba festival is an extraordinary cultural event celebrated annually in the oasis of Djanet, in the heart of the Tassili n'Ajjer region. </p><p>This ancient Tuareg tradition, which has been inscribed on UNESCO’s List of the Intangible Cultural Heritage of Humanity, coincides with the Islamic celebration of Ashura. </p><p>Historically, the festival marks a peace treaty signed between two rival Tuareg tribes—the El Mihan and the Azellouaz—ending a long period of conflict. </p><p>To commemorate this peace, the two communities engage in a symbolic ritual that is part-dance and part-mock battle.</p><iframe class=\"ql-video ql-align-center\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://www.youtube.com/embed/G7BDZLVIaSQ?showinfo=0\"></iframe><p><br></p>",
+    "itinerary": [
+      "Arrival & Oasis Charm",
+      "Tassili n'Ajjer Exploration",
+      "Deep Desert & Giant Dunes",
+      "Heritage & Departure"
+    ]
+  },
+  {
+    "id": 176600305448328670,
+    "title": "Algeria by Motorcycle",
+    "date": "2026-02-18",
+    "duration": 4,
+    "route": [
+      "Ghardaïa",
+      "Timimoun",
+      "Taghit",
+      "Biskra",
+      "Costantina",
+      "Timgad"
+    ],
+    "pricePerDay": 200,
+    "image": "assets/upcomingTrips_img/176600305448328670.webp",
+    "inclusions": [
+      "14 notti in camera doppia in hotel 3/4/5* o migliori in loco",
+      "Le colazioni e cene come da programma",
+      "Traghetto A/R in cabina doppia",
+      "Coordinatore RTE in moto",
+      "Accompagnatore RTE su mezzo di supporto/assistenza per trasporto bagagli (4X4/Furgone)",
+      "Assicurazione Medico (obbligatoria per rilascio visto)",
+      "Guida locale su mezzo di supporto"
+    ],
+    "description": "<p>An original motorcycle journey to discover Algeria, through oases, desert, and breathtaking natural scenery.</p><p>An adventure steeped in majestic landscapes, ancient cities, and an authentic and vibrant culture. Crossing this vast North African country on two wheels means enjoying a unique experience, amidst fascinating roads, genuine encounters, and ever-changing panoramas.</p><p><br></p><p class=\"ql-align-center\"><strong class=\"ql-size-large\" style=\"color: rgb(230, 0, 0);\">From the Great Eastern Erg to the Great Western Erg</strong></p><p><br></p><p>An itinerary designed to discover Algeria in all its diversity: from the desert regions on the edge of the Saharan Atlas to the immense expanses of sand and dunes over 100 meters high.</p><p>We will disembark in Tunis and reach the Algerian border in two stages.</p><p><br></p><p class=\"ql-align-center\"><span style=\"color: rgb(230, 0, 0);\" class=\"ql-size-large\">Between oases and ancient cities</span></p><p><br></p><p>From El Oued, the city of a thousand domes, we will reach Ghardaia, the heart of the Pentapolis—five fortified cities in the splendid M'Zab Valley, a UNESCO World Heritage Site.</p><p>We'll continue to the oasis of El Golea and Timimoun, the \"Queen of the Desert,\" an ancient caravan center on the Trans-Saharan, famous for its red ochre hues and fiery sunsets.</p><p>From here, we'll drive through palm groves, dunes, and villages to Taghit, the pearl of the Sahara, where time seems to have stood still amidst rock carvings and Neolithic remains.</p><p>The journey continues to Aïn Sefra and Djelfa, typical Arab villages, to the splendid Biskra, the \"Gateway to the Great South,\" an important oasis and production center for the world's finest dates.</p><p><br></p><p class=\"ql-align-center\"><span style=\"color: rgb(230, 0, 0);\" class=\"ql-size-large\">In the footsteps of history</span></p><p><br></p><p>We'll conclude our journey north by visiting Constantine, the \"city of suspension bridges,\" and ancient Timgad, one of Africa's most extraordinary Roman cities.</p><p><br></p><p>The return journey will cross Tunisia with a stop in the charming Tabarka, overlooking the Mediterranean.</p><p><br></p><p class=\"ql-align-center\"><span style=\"color: rgb(230, 0, 0);\" class=\"ql-size-large\">A trip for everyone</span></p><p><br></p><p>This motorcycle trip in Algeria is a total immersion in the culture, history, and natural beauty of an extraordinary country.</p><p>Suitable for all types of motorcycles, even with a passenger, it is designed for those who want to discover authentic Algeria in safety, comfort, and a spirit of adventure.</p><p><br></p><p class=\"ql-align-center\"><img src=\"/assets/content_img/img_1766003423846_526.webp\"></p>",
+    "itinerary": [
+      [
+        "Arrive in Djanet, meet your Tuareg guide, and check into your accommodation.",
+        "Explore the palm groves of the city and visit the \"Crying Cow\" (La Vache qui Pleure) rock engraving",
+        "Enjoy a traditional tea ceremony under the stars"
+      ],
+      [
+        "Full day 4x4 expedition into the Tassili n'Ajjer plateau.",
+        "Discover ancient rock paintings and breathtaking sandstone formations (The \"Rock Forests\")",
+        "Picnic lunch in a desert canyon and sunset watching from a high ridge"
+      ],
+      [
+        "Head to the \"Essendilene\" canyon for a short hike to its hidden emerald guelta (water hole)",
+        "Drive to the massive dunes of \"Admer\" for sandboarding and photography",
+        "Traditional Saharan dinner and camping in the desert"
+      ],
+      [
+        "Visit the local craft market in Djanet to buy Tuareg jewelry and souvenirs",
+        "Final walk through the ancient Ksar (old town)",
+        "Transfer to the airport for departure"
+      ]
+    ],
+    "excludes": [
+      "Visa Fee",
+      "Auto",
+      "Gas"
+    ]
+  }
+]
