@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>إرسال بيانات لفايربيس</title>
+</head>
+
+<body>
+
+    <h2>نموذج التواصل</h2>
+    <form id="contactForm">
+        <input type="text" id="userName" placeholder="الاسم" required><br><br>
+        <input type="email" id="userEmail" placeholder="البريد الإلكتروني" required><br><br>
+        <textarea id="userMsg" placeholder="رسالتك"></textarea><br><br>
+        <button type="submit">إرسال البيانات</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script type="module">
+        // استيراد الأدوات اللازمة من فايربيس
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+
+        // إعدادات مشروعك الخاص (ضع بياناتك هنا)
+        const firebaseConfig = {
+            apiKey: "AIzaSyDYqp8oNK8_efBvPsXcZB4iB0dYsxkWqyE",
+            authDomain: "sand-expert.firebaseapp.com",
+            projectId: "sand-expert",
+            storageBucket: "sand-expert.firebasestorage.app",
+            messagingSenderId: "81426376031",
+            appId: "1:81426376031:web:c8bf8af7d04e6346f182ea",
+            measurementId: "G-QX8H1XHVBE"
+        };
+
+        // تهيئة فايربيس
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // ربط العناصر من HTML
+        const contactForm = document.getElementById('contactForm');
+        const statusText = document.getElementById('status');
+
+        // عند الضغط على زر الإرسال
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // منع الصفحة من التحديث
+
+            // جلب القيم من المدخلات
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            const message = document.getElementById('userMsg').value;
+
+            try {
+                statusText.innerText = "جاري الإرسال...";
+
+                // إرسال البيانات إلى مجموعة (Collection) اسمها "messages"
+                await addDoc(collection(db, "messages"), {
+                    userName: name,
+                    userEmail: email,
+                    message: message,
+                    timestamp: new Date() // تسجيل وقت الإرسال
+                });
+
+                statusText.innerText = "تم إرسال البيانات بنجاح! ✅";
+                contactForm.reset(); // تفريغ الفورم
+            } catch (error) {
+                console.error("خطأ في الإرسال: ", error);
+                statusText.innerText = "حدث خطأ أثناء الإرسال ❌";
+            }
+        });
+    </script>
+</body>
+
+</html>
