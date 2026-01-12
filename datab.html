@@ -198,11 +198,11 @@
 
         <form id="visaForm" class="grid">
             <div class="form-group">
-                <label>Surname</label>
+                <label>Name</label>
                 <input type="text" name="sur-name" placeholder="" required autocomplete="off" autocorrect="off">
             </div>
-            <div class="form-group">
-                <label>Name</label>
+            <div class="form-group"> 
+                <label>Last Name</label>
                 <input type="text" name="last-name" placeholder="" required autocomplete="off" autocorrect="off">
             </div>
 
@@ -351,8 +351,8 @@
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
             // جلب القيم من المدخلات
-            const name = document.getElementById('sur-name').value;
-            const lastName = document.getElementById('last-name').value;
+            const name = visaForm.elements['sur-name'].value;
+            const lastName = visaForm.elements['last-name'].value;
             const birthDay = visaForm.elements['dob_day'].value + '/' + visaForm.elements['dob_month'].value + '/' + visaForm.elements['dob_year'].value;
             const placeOfBirth = visaForm.elements['pob'].value;
             const currentNationality = visaForm.elements['current_nationality'].value;
