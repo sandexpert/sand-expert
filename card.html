@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://tap-sdks.b-cdn.net/apple-pay/build-1.2.0/main.css" />
+		<script src="https://tap-sdks.b-cdn.net/card/1.0.2/index.js"></script>
+		<script src="https://tap-sdks.b-cdn.net/apple-pay/build-1.2.0/main.js"></script>
+		<style>
+			.mx-auto {
+				max-width: 500px;
+				margin: auto;
+				text-align: center;
+			}
+		</style>
+
+		<title>card demo</title>
+	</head>
+	<body>
+        <h1 class="mx-auto">Tap Test</h1>
+		<br><br>
+		<div class="mx-auto" id="apple-pay-button"></div>
+		<br><br>
+		<h1 class="mx-auto">OR</h1>
+		<br><br>
+		<div class="mx-auto" id="card-sdk-id"></div> 
+        <button class="mx-auto" id="card-v2" onclick="window.CardSDK.tokenize()">Submit</button>
+		<script>
+			const { renderTapCard, Theme, Currencies, Direction, Edges, Locale } = window.CardSDK
+			const { unmount } = renderTapCard('card-sdk-id', {
+				publicKey: 'pk_test_EtHFV4BuPQokJT6jiROls87Y',
+				merchant: {
+					id: '599424'
+				},
+				transaction: {
+					amount: 1,
+					currency: Currencies.SAR
+				},
+				customer: {
+					name: [
+						{
+							lang: Locale.AR,
+							first: 'Test',
+							last: 'Test',
+							middle: 'Test'
+						}
+					],
+					nameOnCard: 'FFF',
+					editable: true,
+					contact: {
+						email: 'test@gmail.com',
+						phone: {
+							countryCode: '20',
+							number: '1000000000'
+						}
+					}
+				},
+				acceptance: {
+					supportedBrands: ['AMERICAN_EXPRESS', 'VISA', 'MASTERCARD', 'MADA','TABBY'],
+					supportedCards: "ALL"
+				},
+				fields: {
+					cardHolder: true
+				},
+				addons: {
+					displayPaymentBrands: true,
+					loader: true,
+					saveCard: true
+				},
+				interface: {
+					locale: Locale.AR,
+					theme: Theme.LIGHT,
+					edges: Edges.CURVED,
+					direction: Direction.RTL
+				},
+				onReady: () => console.log('onReady'),
+				onFocus: () => console.log('onFocus'),
+				onBinIdentification: (data) => console.log('onBinIdentification', data),
+				onValidInput: (data) => console.log('onValidInputChange', data),
+				onInvalidInput: (data) => console.log('onInvalidInput', data),
+           onChangeSaveCardLater: (isSaveCardSelected) => console.log(isSaveCardSelected, " :onChangeSaveCardLater"), // isSaveCardSelected:boolean
+				onError: (data) => console.log('onError', data),
+				onSuccess: (data) => console.log('onSuccess', data)
+			})
+		</script>
+		
+	<script type="text/javascript">
+
+        const { render, abortApplePaySession } =
+            window.TapApplepaySDK
+        render(
+            {
+                debug: false,
+                scope: 'TapToken',
+                publicKey: 'pk_test_EtHFV4BuPQokJT6jiROls87Y',
+                environment: 'Production',
+                merchant: {
+                    domain: 'demo.staging.tap.company',
+                    id: '599424'
+                },
+                acceptance: {
+                    supportedBrands: ['mada','masterCard', 'visa']
+                },
+                features: {
+                  supportsCouponCode: false,
+                  // incase you want to get the customer info for express checkout
+                  shippingContactFields: ['name', 'phone', 'email']
+                },
+                transaction: {
+                    currency: 'SAR',
+                    amount: '40'
+                    
+                },
+                customer: {
+                    name: [
+                        {
+                            locale: 'ar',
+                            first: 'test',
+                            last: 'tester',
+                            middle: 'test'
+                        }
+                    ],
+                    contact: {
+                        email: 'test@gmail.com',
+                        phone: {
+                            number: '1000000000',
+                            countryCode: '+20'
+                        }
+                    }
+                },
+                interface: {
+                    locale: 'ar',
+                    theme: 'dark',
+                    type: 'buy',
+                    edges: 'curved'
+                },
+                onCancel: () => {
+                    // it's called when the user cancels the payment
+                    console.log('onCancel')
+                },
+                onError: (error) => {
+                    // it's called when there is an error with the payment
+                    console.log('onError', error)
+                },
+                onReady: () => {
+                    // it's called when the apple pay button is ready to click
+                    console.log('onReady')
+                },
+                onSuccess: async (data, event) => {
+                    // it's called when the payment is successful
+                    console.log('onSuccess', data)
+                    // event is the same as the event in the onpaymentauthorized event https://developer.apple.com/documentation/apple_pay_on_the_web/applepaypaymentauthorizedevent
+                    console.log('shipping contact info for express checkout: ', event?.payment?.shippingContact);
+               }
+          
+        },'apple-pay-button')
+    </script>
+	</body>
+</html>
