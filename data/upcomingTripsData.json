@@ -2,7 +2,7 @@
   {
     "id": 176599970818339200,
     "title": "The Sbeiba Festival in Djanet (Illizi)",
-    "date": "2025-12-27",
+    "date": "2026-06-24",
     "duration": 4,
     "route": [
       "El Oued",
@@ -21,11 +21,20 @@
     ],
     "description": "<p>The Sbeiba festival is an extraordinary cultural event celebrated annually in the oasis of Djanet, in the heart of the Tassili n'Ajjer region. </p><p>This ancient Tuareg tradition, which has been inscribed on UNESCO’s List of the Intangible Cultural Heritage of Humanity, coincides with the Islamic celebration of Ashura. </p><p>Historically, the festival marks a peace treaty signed between two rival Tuareg tribes—the El Mihan and the Azellouaz—ending a long period of conflict. </p><p>To commemorate this peace, the two communities engage in a symbolic ritual that is part-dance and part-mock battle.</p><iframe class=\"ql-video ql-align-center\" frameborder=\"0\" allowfullscreen=\"true\" src=\"https://www.youtube.com/embed/G7BDZLVIaSQ?showinfo=0\"></iframe><p><br></p>",
     "itinerary": [
-      "Arrival & Oasis Charm",
-      "Tassili n'Ajjer Exploration",
-      "Deep Desert & Giant Dunes",
-      "Heritage & Departure"
-    ]
+      [
+        "Arrival & Oasis Charm"
+      ],
+      [
+        "Tassili n'Ajjer Exploration"
+      ],
+      [
+        "Deep Desert & Giant Dunes"
+      ],
+      [
+        "Heritage & Departure"
+      ]
+    ],
+    "excludes": []
   },
   {
     "id": 176600305448328670,
