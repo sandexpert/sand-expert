@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: USERNAME/REPO
+  repo: sandexpert/sand-expert
   branch: main
 
 media_folder: "assets/articles_img"
