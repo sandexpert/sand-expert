@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روابِط التواصل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-color: #ffffff;
+            --whatsapp-color: #25D366;
+            --insta-color: #E1306C;
+            --fb-color: #1877F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            -webkit-tap-highlight-color: transparent; /* إزالة لون التحديد عند اللمس في الجوال */
+        }
+
+        body {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #1e1b4b);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* صورة الملف الشخصي */
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0px 0px 12px 5px rgb(0 0 0 / 71%);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* الأزرار */
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease, background 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* تأثير اللمس بدلاً من الهوفر */
+        .link-card:active {
+            transform: scale(0.96);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .link-card i {
+            font-size: 1.5rem;
+            width: 40px;
+        }
+
+        .link-card span {
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-right: -40px; /* لموازنة الأيقونة وجعل النص في المنتصف تماماً */
+        }
+
+        /* ألوان الأيقونات */
+        .whatsapp i { color: var(--whatsapp-color); }
+        .instagram i { color: var(--insta-color); }
+        .facebook i { color: var(--fb-color); }
+
+        /* تذييل الصفحة */
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Logo_QR.png" alt="Profile" class="profile-img">
+        
+        <h1>SAND EXPERT TRAVEL</h1>
+        <p></p>
+
+        <div class="links-wrapper">
+            <a href="https://wa.me/+213561253285" class="link-card whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>واتساب</span>
+            </a>
+
+            <a href="https://instagram.com/sand.expert" class="link-card instagram">
+                <i class="fab fa-instagram"></i>
+                <span>انستقرام</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61584878969028" class="link-card facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>فيسبوك</span>
+            </a>
+        </div>
+
+        <div class="footer">
+        </div>
+    </div>
+
+</body>
+</html>
