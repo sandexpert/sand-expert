@@ -1,0 +1,104 @@
+# 1. الإعدادات العالمية للوسائط (للصور داخل نصوص المقالات)
+media:
+  path: public/assets/content_img
+  publicPath: assets/content_img
+
+# 2. تعريف المجموعات (المقالات والرحلات والمعرض)
+content:
+  # --- قسم الوجهات السياحية ---
+  - name: destinations
+    label: "الوجهات السياحية"
+    type: collection
+    path: public/data/destinations/{{slug}}.json # سيتم تسمية الملف تلقائياً من العنوان
+    format: json
+    fields:
+      - { name: title, label: "عنوان الوجهة", type: string }
+      - name: image
+        label: "الصورة البارزة"
+        type: image
+        path: public/assets/articles_img
+        publicPath: assets/articles_img
+      - { name: article, label: "مقال الوجهة", type: rich-text }
+
+  # --- قسم الرحلات القادمة ---
+  - name: upcoming_trips
+    label: "الرحلات القادمة"
+    type: collection
+    path: public/data/upcomingTrips/{{slug}}.json # سيتم تسمية الملف تلقائياً من العنوان
+    format: json
+    fields:
+      - { name: title, label: "اسم الرحلة", type: string }
+      - { name: date, label: "تاريخ الرحلة", type: date }
+      - { name: duration, label: "المدة (بالأيام)", type: number }
+      - { name: pricePerDay, label: "السعر لليوم الواحد", type: number }
+      - name: image
+        label: "بوستر الرحلة"
+        type: image
+        path: public/assets/upcomingTrips_img
+        publicPath: assets/upcomingTrips_img
+      - name: route
+        label: "مسار الرحلة (المدن)"
+        type: list
+        field: { type: string, label: "المدينة" }
+      - name: inclusions
+        label: "ماذا تشمل (Included)"
+        type: list
+        field: { type: string, label: "خدمة مشمولة" }
+      - name: excludes
+        label: "ما لا تشمله (Excluded)"
+        type: list
+        field: { type: string, label: "خدمة غير مشمولة" }
+      - name: itinerary
+        label: "البرنامج اليومي (Itinerary)"
+        type: list
+        field: { type: string, label: "تفاصيل اليوم" }
+      - { name: description, label: "وصف الرحلة الكامل", type: rich-text }
+
+  # --- قسم معرض الصور ---
+  - name: gallery
+    label: "معرض الصور"
+    type: collection
+    # بما أن الصور ليس لها عنوان، سنسمي الملف بناءً على التاريخ والساعة ليكون فريداً
+    path: public/data/gallery/{{year}}{{month}}{{day}}-{{hour}}{{minute}}.json
+    format: json
+    fields:
+      - name: url
+        label: "اختر الصورة للرفع"
+        type: image
+        path: public/assets/gallery_img
+        publicPath: assets/gallery_img
+      - { name: uploadDate, label: "تاريخ الرفع", type: datetime }
+
+  # --- قسم إدارة الفهارس (تحديث القائمة الرئيسية) ---
+  - name: indexes
+    label: "إدارة القوائم (Indexes)"
+    type: files
+    files:
+      - name: destinations_index
+        label: "تعديل قائمة الوجهات"
+        file: public/data/destinations/index.json
+        fields:
+          - name: list
+            label: "القائمة الحالية"
+            type: list
+            fields:
+              - {
+                  name: id,
+                  label: "الـ ID (اسم ملف المقال بدون .json)",
+                  type: string,
+                }
+              - { name: title, label: "العنوان الظاهر", type: string }
+              - { name: image, label: "مسار الصورة", type: string }
+
+      - name: trips_index
+        label: "تعديل قائمة الرحلات"
+        file: public/data/upcomingTrips/index.json
+        fields:
+          - name: list
+            label: "القائمة الحالية"
+            type: list
+            fields:
+              - { name: id, label: "الـ ID (اسم ملف الرحلة)", type: string }
+              - { name: title, label: "العنوان", type: string }
+              - { name: date, label: "التاريخ", type: string }
+              - { name: image, label: "الصورة", type: string }
