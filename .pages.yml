@@ -1,31 +1,31 @@
-# 1. الإعدادات العالمية للوسائط (للصور داخل نصوص المقالات)
+# 1. الإعدادات العالمية للوسائط (الصور داخل المقالات)
 media:
-  path: public/assets/content_img
-  publicPath: assets/content_img
+  input: public/assets/content_img
+  output: /assets/content_img
 
-# 2. تعريف المجموعات (المقالات والرحلات والمعرض)
+# 2. تعريف المجموعات
 content:
   # --- قسم الوجهات السياحية ---
   - name: destinations
     label: "الوجهات السياحية"
     type: collection
-    path: public/data/destinations/{{slug}}.json # سيتم تسمية الملف تلقائياً من العنوان
-    format: json
+    path: public/data/destinations/{{slug}}.json
     fields:
       - { name: title, label: "عنوان الوجهة", type: string }
       - name: image
         label: "الصورة البارزة"
         type: image
-        path: public/assets/articles_img
-        publicPath: assets/articles_img
+        # تخصيص مسار خاص لهذا الحقل
+        media:
+          input: public/assets/articles_img
+          output: /assets/articles_img
       - { name: article, label: "مقال الوجهة", type: rich-text }
 
   # --- قسم الرحلات القادمة ---
   - name: upcoming_trips
     label: "الرحلات القادمة"
     type: collection
-    path: public/data/upcomingTrips/{{slug}}.json # سيتم تسمية الملف تلقائياً من العنوان
-    format: json
+    path: public/data/upcomingTrips/{{slug}}.json
     fields:
       - { name: title, label: "اسم الرحلة", type: string }
       - { name: date, label: "تاريخ الرحلة", type: date }
@@ -34,8 +34,9 @@ content:
       - name: image
         label: "بوستر الرحلة"
         type: image
-        path: public/assets/upcomingTrips_img
-        publicPath: assets/upcomingTrips_img
+        media:
+          input: public/assets/upcomingTrips_img
+          output: /assets/upcomingTrips_img
       - name: route
         label: "مسار الرحلة (المدن)"
         type: list
@@ -58,18 +59,18 @@ content:
   - name: gallery
     label: "معرض الصور"
     type: collection
-    # بما أن الصور ليس لها عنوان، سنسمي الملف بناءً على التاريخ والساعة ليكون فريداً
-    path: public/data/gallery/{{year}}{{month}}{{day}}-{{hour}}{{minute}}.json
+    path: public/data/gallery/{{year}}{{month}}{{day}}-{{hour}}{{minute}}.json 
     format: json
     fields:
       - name: url
-        label: "اختر الصورة للرفع"
+        label: "اختر الصورة"
         type: image
-        path: public/assets/gallery_img
-        publicPath: assets/gallery_img
+        media:
+          input: public/assets/gallery_img
+          output: /assets/gallery_img
       - { name: uploadDate, label: "تاريخ الرفع", type: datetime }
 
-  # --- قسم إدارة الفهارس (تحديث القائمة الرئيسية) ---
+  # --- قسم الفهارس (Indexes) ---
   - name: indexes
     label: "إدارة القوائم (Indexes)"
     type: files
@@ -82,14 +83,10 @@ content:
             label: "القائمة الحالية"
             type: list
             fields:
-              - {
-                  name: id,
-                  label: "الـ ID (اسم ملف المقال بدون .json)",
-                  type: string,
-                }
-              - { name: title, label: "العنوان الظاهر", type: string }
+              - { name: id, label: "المعرف", type: string }
+              - { name: title, label: "العنوان", type: string }
               - { name: image, label: "مسار الصورة", type: string }
-
+      
       - name: trips_index
         label: "تعديل قائمة الرحلات"
         file: public/data/upcomingTrips/index.json
@@ -98,7 +95,7 @@ content:
             label: "القائمة الحالية"
             type: list
             fields:
-              - { name: id, label: "الـ ID (اسم ملف الرحلة)", type: string }
+              - { name: id, label: "المعرف", type: string }
               - { name: title, label: "العنوان", type: string }
               - { name: date, label: "التاريخ", type: string }
               - { name: image, label: "الصورة", type: string }
