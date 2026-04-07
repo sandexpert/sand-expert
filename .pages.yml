@@ -14,6 +14,7 @@ content:
     filename: "{primary}.json"
     fields:
       - name: title
+        required: true
         label: "عنوان الوجهة"
         type: string
       - name: image
@@ -36,7 +37,7 @@ content:
           unique: true
       - name: publish_at
         type: date
-        readonly: true
+        hidden:
         options:
           time: true
           format: yyyy-MM-dd'T'HH:mm
