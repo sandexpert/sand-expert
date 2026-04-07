@@ -1,9 +1,3 @@
-# 1. إعداد الوسائط العالمي (حسب التوثيق يستخدم input)
-media:
-  input: assets/content_img
-  output: assets/content_img
-
-# 2. تعريف المحتوى
 content:
   - name: destinations
     label: "الرحلات القادمة"
@@ -28,6 +22,12 @@ content:
       - name: article
         label: "نص المقال"
         type: rich-text
+        options:
+          format: html
+          switcher: false
+          media: content_images
+          path: assets/content_img
+          rename: true
   - name: Index
     label: index.json
     type: file
