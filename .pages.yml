@@ -38,3 +38,6 @@ content:
     label: index.json
     type: file
     path: data/destinations_index.json
+    
+settings:
+  hide: true
