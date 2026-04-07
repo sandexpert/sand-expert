@@ -22,7 +22,7 @@ content:
         options:
           path: assets/articles_img
           unique: true
-          rename: true
+          rename: safe
           categories: [image]
       - name: article
         label: "نص المقال"
@@ -31,7 +31,10 @@ content:
           format: html
           switcher: false
           path: assets/content_img
-          rename: true
+          rename: safe
+          multiple:
+            max: 30
+          unique: true
   - name: Index
     label: index.json
     type: file
