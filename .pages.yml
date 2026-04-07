@@ -26,4 +26,4 @@ content:
   - name: Index
     label: index.json
     type: file
-    path: data/destinations/index.json
+    path: data/destinations_index.json
