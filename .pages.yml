@@ -15,6 +15,7 @@ content:
         label: "الصورة البارزة"
         type: image
         options:
+          media: images
           path: assets/articles_img
           unique: true
           rename: true
