@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // 1. جلب "الفهارس" فقط لعرض البطاقات (Cards) في الصفحة الرئيسية
       // هذه الملفات تحتوي على مصفوفة بسيطة [ {id, title, image}, ... ]
-      const tripsRes = await fetch("data/upcomingTrips/index.json");
+      const tripsRes = await fetch("data/upcomingTrips_index.json");
       const tripsSummary = await tripsRes.json();
 
-      const destRes = await fetch("data/destinations/index.json");
+      const destRes = await fetch("data/destinations_index.json");
       const destinationsSummary = await destRes.json();
 
       // عرض البطاقات (تستخدم البيانات المختصرة من الفهرس)
