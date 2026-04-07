@@ -6,12 +6,12 @@ media:
 # 2. تعريف المحتوى
 content:
   - name: destinations
-    label: "الوجهات السياحية"
+    label: "الرحلات القادمة"
     type: collection
     # التوثيق ينص على أن path هو للمجلد فقط
     path: data/destinations
     # التوثيق ينص على استخدام filename لتحديد اسم الملف الجديد
-    filename: "{{slug}}.json"
+    filename: "{primary}.json"
     fields:
       - name: title
         label: "عنوان الوجهة"
@@ -23,3 +23,7 @@ content:
       - name: article
         label: "نص المقال"
         type: rich-text
+  - name: Index
+    label: index.json
+    type: file
+    path: data/destinations/index.json
