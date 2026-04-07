@@ -20,11 +20,9 @@ content:
         label: "الصورة البارزة"
         type: image
         options:
-          select: false
           path: assets/articles_img
           unique: true
           rename: safe
-          categories: [image]
       - name: article
         label: "نص المقال"
         type: rich-text
