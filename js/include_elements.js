@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <p>Your message matters to us.</p>
             <p>Leave us a message and we will respond to you as soon as possible</p>
             <div class="cta-group">
-                <a id="btn-whatsapp" href="https://wa.me/21652525252" target="_blank" class="btn btn-whatsapp">Contact via WhatsApp</a>
-                <a id="btn-telegram" href="https://t.me/yourusername" target="_blank" class="btn btn-telegram">Contact via Telegram</a>
+                <a id="btn-whatsapp" href="https://wa.me/+213561253285" target="_blank" class="btn btn-whatsapp">Contact via WhatsApp</a>
+                <a id="btn-telegram" href="https://t.me/sand.expert" target="_blank" class="btn btn-telegram">Contact via Telegram</a>
                 <a id="btn-email" href="mailto:contact@sand.expert" target="_blank" class="btn btn-gmail">Contact via Email</a>
             </div>
         </div>
@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h4 style="margin-bottom: 1rem;font-weight: bold;">Contact :</h4>
                 <ul>
                     <li>
-                        <a href="https://wa.me/21652525252" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
+                        <a href="https://wa.me/+213561253285" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
                             <img class="social-icon" src="assets/icons/whatsapp.svg" alt="whatsapp">
-                            +21352525252
+                            +213561253285
                         </a>
                     </li>
                     <li>
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </a>
                     </li>
                     <li>
-                        <a href="https://t.me/yourusername" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
+                        <a href="https://t.me/sand.expert" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
                             <img class="social-icon" src="assets/icons/telegram.svg" alt="telegram">
                             +21352525252
                         </a>
@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
                 <h4 style="margin-bottom: 1rem;font-weight: bold;">Follow our Adventures</h4>
                 <div class="social-links">
-                    <a href="#"><img class="social-icon" src="assets/icons/instagram.svg" alt="instagram"></a>
+                    <a href="https://instagram.com/sand.expert"><img class="social-icon" src="assets/icons/instagram.svg" alt="instagram"></a>
                     <a href="#"><img class="social-icon" src="assets/icons/facebook.svg" alt="facebook"></a>
                     <a href="#"><img class="social-icon" src="assets/icons/tiktok.svg" alt="tiktok"></a>
                     <a href="#"><img class="social-icon" src="assets/icons/youtube.svg" alt="youtube"></a>
                     <a href="#"><img class="social-icon" src="assets/icons/linkedin.svg" alt="linkedin"></a>
-                    <a href="#"><img class="social-icon" src="assets/icons/whatsapp.svg" alt="whatsapp"></a>
+                    <a href="https://wa.me/+213561253285"><img class="social-icon" src="assets/icons/whatsapp.svg" alt="whatsapp"></a>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@ async function loadGallery() {
         const instagramCard = document.createElement('div');
         instagramCard.className = 'card gallery-card instagram-card';
         instagramCard.innerHTML = `
-            <a href="https://instagram.com/yourusername" target="_blank" style="display:block; position:relative; height:100%;">
+            <a href="https://instagram.com/sand.expert" target="_blank" style="display:block; position:relative; height:100%;">
                 <img src="/assets/last_gallery.webp" alt="More on Instagram" style="height:100%; object-fit:cover;">
                 <div class="gallery-overlay">
                     <span>Click here To More</span>
