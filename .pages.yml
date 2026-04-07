@@ -40,4 +40,4 @@ content:
     path: data/destinations_index.json
     
 settings:
-  hide: true
+  hide: false
