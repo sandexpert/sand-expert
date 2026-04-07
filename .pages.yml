@@ -19,7 +19,12 @@ content:
       - name: image
         label: "الصورة البارزة"
         type: image
-        # ملاحظة: لا نضع path أو input هنا لكي لا يظهر خطأ
+        options:
+          media: images
+          path: assets/articles_img
+          unique: true
+          rename: true
+          categories: [image]
       - name: article
         label: "نص المقال"
         type: rich-text
