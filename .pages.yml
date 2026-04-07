@@ -20,6 +20,7 @@ content:
         label: "الصورة البارزة"
         type: image
         options:
+          select: false
           path: assets/articles_img
           unique: true
           rename: safe
