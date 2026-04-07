@@ -21,7 +21,7 @@ content:
         type: image
         options:
           media: images
-          path: assets/articles_img
+          path: public/assets/articles_img
           unique: true
           rename: true
           categories: [image]
@@ -31,7 +31,7 @@ content:
         options:
           format: html
           switcher: false
-          path: assets/content_img
+          path: public/assets/content_img
           rename: true
   - name: Index
     label: index.json
