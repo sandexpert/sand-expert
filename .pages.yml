@@ -1,6 +1,6 @@
 # 1. إعداد الوسائط العالمي (حسب التوثيق يستخدم input)
 media:
-  input: public/assets/content_img
+  input: assets/content_img
   output: assets/content_img
 
 # 2. تعريف المحتوى
@@ -9,7 +9,7 @@ content:
     label: "الوجهات السياحية"
     type: collection
     # التوثيق ينص على أن path هو للمجلد فقط
-    path: public/data/destinations
+    path: data/destinations
     # التوثيق ينص على استخدام filename لتحديد اسم الملف الجديد
     filename: "{{slug}}.json"
     fields:
