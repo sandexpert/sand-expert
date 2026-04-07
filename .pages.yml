@@ -28,7 +28,6 @@ content:
           media: content_images
           path: assets/content_img
           rename: true
-          categories: [image]
   - name: Index
     label: index.json
     type: file
