@@ -1,3 +1,8 @@
+# 1. إعداد الوسائط العالمي (حسب التوثيق يستخدم input)
+media:
+  input: assets/content_img
+  output: assets/content_img
+
 # 2. تعريف المحتوى
 content:
   - name: destinations
@@ -15,8 +20,7 @@ content:
         label: "الصورة البارزة"
         type: image
         options:
-          media: images
-          path: public/assets/articles_img
+          path: assets/articles_img
           unique: true
           rename: true
           categories: [image]
