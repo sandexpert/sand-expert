@@ -1,11 +1,7 @@
 media:
-  - name: images
-    label: "معرض الصور"
-    input: assets/gallery_img
-    output: assets/gallery_img
-    rename: safe
-    categories: [image]
-      
+  input: assets
+  output: assets
+
 content:
   - name: destinations
     label: "المقالات"
@@ -32,7 +28,6 @@ content:
           path: assets/articles_img
           unique: true
           rename: safe
-          categories: [image]
       - name: published_at
         label: "تاريخ النشر"
         type: date
@@ -123,3 +118,15 @@ content:
           multiple:
             max: 35
           unique: true
+  - name: gallery
+    label: "معرض الصور"
+    type: collection
+    path: assets/gallery_img
+    fields:
+      - name: image
+        label: "رفع الصورة"
+        type: image
+        required: true
+        options:
+          path: assets/gallery_img
+          rename: safe
