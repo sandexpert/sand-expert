@@ -1,13 +1,11 @@
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Load header-footer component
-    if (document.querySelector('header')) {
-        document.querySelector('header').innerHTML = `
+document.addEventListener("DOMContentLoaded", function () {
+  // Load header-footer component
+  if (document.querySelector("header")) {
+    document.querySelector("header").innerHTML = `
             <div class="container nav-container">
-                <a href="index.html" class="logo notranslate" translate="no">SAND <img src="assets/logo-compass.webp" alt="logo" class="social-icon"> EXPERT</a>
+                <a href="index.html" class="logo notranslate" translate="no">SAND <img src="assets2/logo-compass.webp" alt="logo" class="social-icon"> EXPERT</a>
                 <button class="hamburger" aria-label="Toggle navigation">☰</button>
-                <img src="assets/logo.webp" alt="logo" class="nav-logo">
+                <img src="assets2/logo.webp" alt="logo" class="nav-logo">
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="destinations.html">Destinations</a>
@@ -16,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 </nav>
             </div>
         `;
-    }
-    if (document.querySelector('book-trip')) {
-        document.querySelector('book-trip').innerHTML = `
+  }
+  if (document.querySelector("book-trip")) {
+    document.querySelector("book-trip").innerHTML = `
         <div style="background: #e0f2f1; padding: 2rem; border-radius: 8px;mask-image: linear-gradient(to top, transparent 0%, black 10%);">
             <h2>Book now or get more information</h2>
             <p>Your message matters to us.</p>
@@ -30,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         `;
-    }
-    if (document.querySelector('footer')) {
-        document.querySelector('footer').innerHTML = `
-        <img src="assets/logo.webp" alt="logo" class="nav-logo" style="transform: rotateX(180deg) translateY(7rem) scaleX(-1); z-index: 0; max-height: -webkit-fill-available;">
+  }
+  if (document.querySelector("footer")) {
+    document.querySelector("footer").innerHTML = `
+        <img src="assets2/logo.webp" alt="logo" class="nav-logo" style="transform: rotateX(180deg) translateY(7rem) scaleX(-1); z-index: 0; max-height: -webkit-fill-available;">
         <div class="container footer-content">
             <div style=" margin: 0 2rem;">
                 <h3 translate="no" class="notranslate">SAND EXPERT</h3>
@@ -44,19 +42,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 <ul>
                     <li>
                         <a href="https://wa.me/+213561253285" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
-                            <img class="social-icon" src="assets/icons/whatsapp.svg" alt="whatsapp">
+                            <img class="social-icon" src="assets2/icons/whatsapp.svg" alt="whatsapp">
                             +213561253285
                         </a>
                     </li>
                     <li>
                         <a href="mailto:contact@sand.expert" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
-                            <img class="social-icon" src="assets/icons/gmail.svg" alt="email">
+                            <img class="social-icon" src="assets2/icons/gmail.svg" alt="email">
                             contact@sand.expert
                         </a>
                     </li>
                     <li>
                         <a href="https://t.me/sand.expert" target="_blank" style="color: white;display: flex; align-items: center;gap: 0.5rem;margin: 0.5rem 0;">
-                            <img class="social-icon" src="assets/icons/telegram.svg" alt="telegram">
+                            <img class="social-icon" src="assets2/icons/telegram.svg" alt="telegram">
                             +21352525252
                         </a>
                     </li>
@@ -65,127 +63,133 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
                 <h4 style="margin-bottom: 1rem;font-weight: bold;">Follow our Adventures</h4>
                 <div class="social-links">
-                    <a href="https://instagram.com/sand.expert"><img class="social-icon" src="assets/icons/instagram.svg" alt="instagram"></a>
-                    <a href="#"><img class="social-icon" src="assets/icons/facebook.svg" alt="facebook"></a>
-                    <a href="#"><img class="social-icon" src="assets/icons/tiktok.svg" alt="tiktok"></a>
-                    <a href="#"><img class="social-icon" src="assets/icons/youtube.svg" alt="youtube"></a>
-                    <a href="#"><img class="social-icon" src="assets/icons/linkedin.svg" alt="linkedin"></a>
-                    <a href="https://wa.me/+213561253285"><img class="social-icon" src="assets/icons/whatsapp.svg" alt="whatsapp"></a>
+                    <a href="https://instagram.com/sand.expert"><img class="social-icon" src="assets2/icons/instagram.svg" alt="instagram"></a>
+                    <a href="#"><img class="social-icon" src="assets2/icons/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img class="social-icon" src="assets2/icons/tiktok.svg" alt="tiktok"></a>
+                    <a href="#"><img class="social-icon" src="assets2/icons/youtube.svg" alt="youtube"></a>
+                    <a href="#"><img class="social-icon" src="assets2/icons/linkedin.svg" alt="linkedin"></a>
+                    <a href="https://wa.me/+213561253285"><img class="social-icon" src="assets2/icons/whatsapp.svg" alt="whatsapp"></a>
                 </div>
             </div>
         </div>
     </footer>
         `;
-    }
+  }
 });
-
-
 
 // --- GALLERY FETCH ---
 async function loadGallery() {
-    const galleryContainer = document.getElementById('gallery-picturs');
-    if (!galleryContainer) return;
+  const galleryContainer = document.getElementById("gallery-picturs");
+  if (!galleryContainer) return;
 
-    try {
-        const res = await fetch('data/galleryData.json');
-        if (!res.ok) throw new Error('Failed to load gallery');
-        const images = await res.json();
+  try {
+    const res = await fetch("data/galleryData.json");
+    if (!res.ok) throw new Error("Failed to load gallery");
+    const images = await res.json();
 
-        if (images.length === 0) {
-            galleryContainer.innerHTML = ''; // Clear loading message
-            // We still want to show the instagram link even if empty
-        } else {
-            galleryContainer.innerHTML = images.map(img => `
+    if (images.length === 0) {
+      galleryContainer.innerHTML = ""; // Clear loading message
+      // We still want to show the instagram link even if empty
+    } else {
+      galleryContainer.innerHTML = images
+        .map(
+          (img) => `
                 <div class="card">
                     <img src="/${img.url}" alt="Gallery Image">
                 </div>
-            `).join('');
-        }
+            `,
+        )
+        .join("");
+    }
 
-        // Append "Last Gallery" Instagram Card
-        const instagramCard = document.createElement('div');
-        instagramCard.className = 'card gallery-card instagram-card';
-        instagramCard.innerHTML = `
+    // Append "Last Gallery" Instagram Card
+    const instagramCard = document.createElement("div");
+    instagramCard.className = "card gallery-card instagram-card";
+    instagramCard.innerHTML = `
             <a href="https://instagram.com/sand.expert" target="_blank" style="display:block; position:relative; height:100%;">
-                <img src="/assets/last_gallery.webp" alt="More on Instagram" style="height:100%; object-fit:cover;">
+                <img src="/assets2/last_gallery.webp" alt="More on Instagram" style="height:100%; object-fit:cover;">
                 <div class="gallery-overlay">
                     <span>Click here To More</span>
                 </div>
             </a>
         `;
-        galleryContainer.appendChild(instagramCard);
-
-    } catch (err) {
-        console.error(err);
-        galleryContainer.innerHTML = '<p>Error loading gallery.</p>';
-    }
+    galleryContainer.appendChild(instagramCard);
+  } catch (err) {
+    console.error(err);
+    galleryContainer.innerHTML = "<p>Error loading gallery.</p>";
+  }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadGallery();
-    initGoogleTranslate();
+document.addEventListener("DOMContentLoaded", () => {
+  loadGallery();
+  initGoogleTranslate();
 });
-
 
 // --- LANGUAGE SELECTOR (Custom UI) ---
 
 function initGoogleTranslate() {
-    // 1. Inject Google Translate Script
-    const script = document.createElement('script');
-    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    document.body.appendChild(script);
+  // 1. Inject Google Translate Script
+  const script = document.createElement("script");
+  script.src =
+    "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  document.body.appendChild(script);
 
-    // 2. Define callback
-    window.googleTranslateElementInit = function () {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'ar,fr,it,es,en,de',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    };
+  // 2. Define callback
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        includedLanguages: "ar,fr,it,es,en,de",
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false,
+      },
+      "google_translate_element",
+    );
+  };
 
-    // 3. Create Custom Floating UI
-    createLanguageSelector();
+  // 3. Create Custom Floating UI
+  createLanguageSelector();
 }
 
 function createLanguageSelector() {
-    // Check for current language from cookie
-    const currentLang = getCookie('googtrans') ? getCookie('googtrans').split('/')[2] : 'en';
+  // Check for current language from cookie
+  const currentLang = getCookie("googtrans")
+    ? getCookie("googtrans").split("/")[2]
+    : "en";
 
-    const wrapper = document.createElement('div');
-    wrapper.id = 'custom-lang-selector';
-    wrapper.innerHTML = `
-        <div class="lang-toggle" onclick="toggleLangMenu()">
-            <img src="assets/flags/${currentLang || 'en'}.webp" onerror="this.src='assets/icons/globe.webp'" alt="Lang" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+  const wrapper = document.createElement("div");
+  wrapper.id = "custom-lang-selector";
+  wrapper.innerHTML = `
+        <div class="lang-toggle" onclick="toggleLangMenu()" onblur="document.getElementById('lang-menu').classList.remove('show')">
+            <img src="assets2/flags/${currentLang || "globe"}.webp" onerror="this.src='assets2/icons/globe.webp'" alt="Lang" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
         </div>
         <div class="lang-menu notranslate" id="lang-menu" translate="no">
             <button onclick="changeLanguage('en')">
-                <img src="assets/flags/en.webp" alt="EN" width="20"> English
+                <img src="assets2/flags/en.webp" alt="EN" width="20"> English
             </button>
             <button onclick="changeLanguage('ar')">
-                <img src="assets/flags/ar.webp" alt="AR" width="20"> العربية
+                <img src="assets2/flags/ar.webp" alt="AR" width="20"> العربية
             </button>
             <button onclick="changeLanguage('fr')">
-                <img src="assets/flags/fr.webp" alt="FR" width="20"> Français
+                <img src="assets2/flags/fr.webp" alt="FR" width="20"> Français
             </button>
             <button onclick="changeLanguage('it')">
-                <img src="assets/flags/it.webp" alt="IT" width="20"> Italiano
+                <img src="assets2/flags/it.webp" alt="IT" width="20"> Italiano
             </button>
             <button onclick="changeLanguage('es')">
-                <img src="assets/flags/es.webp" alt="ES" width="20"> Español
+                <img src="assets2/flags/es.webp" alt="ES" width="20"> Español
             </button>
             <button onclick="changeLanguage('de')">
-                <img src="assets/flags/de.webp" alt="DE" width="20"> Deutsch
+                <img src="assets2/flags/de.webp" alt="DE" width="20"> Deutsch
             </button>
         </div>
         <div id="google_translate_element" style="display:none"></div>
     `;
-    document.body.appendChild(wrapper);
+  document.body.appendChild(wrapper);
 
-    // Add CSS
-    const style = document.createElement('style');
-    style.innerHTML = `
+  // Add CSS
+  const style = document.createElement("style");
+  style.innerHTML = `
         #custom-lang-selector {
             position: fixed;
             bottom: 20px;
@@ -252,27 +256,27 @@ function createLanguageSelector() {
             box-shadow: none !important;
         }
     `;
-    document.head.appendChild(style);
+  document.head.appendChild(style);
 }
 
 window.toggleLangMenu = () => {
-    const menu = document.getElementById('lang-menu');
-    menu.classList.toggle('show');
+  const menu = document.getElementById("lang-menu");
+  menu.classList.toggle("show");
 };
 
 window.changeLanguage = (langCode) => {
-    // 1. Set Cookie
-    // Google Translate expects /auto/target or /source/target
-    const cookieValue = `/en/${langCode}`;
-    document.cookie = `googtrans=${cookieValue}; path=/; domain=${window.location.hostname}`;
-    document.cookie = `googtrans=${cookieValue}; path=/;`; // Fallback
+  // 1. Set Cookie
+  // Google Translate expects /auto/target or /source/target
+  const cookieValue = `/en/${langCode}`;
+  document.cookie = `googtrans=${cookieValue}; path=/; domain=${window.location.hostname}`;
+  document.cookie = `googtrans=${cookieValue}; path=/;`; // Fallback
 
-    // 2. Reload Page to apply
-    window.location.reload();
+  // 2. Reload Page to apply
+  window.location.reload();
 };
 
 function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
 }
