@@ -129,4 +129,4 @@ content:
         required: true
         options:
           path: assets/gallery_img
-          rename: safe    
+          rename: safe
