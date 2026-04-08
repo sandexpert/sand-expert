@@ -126,11 +126,6 @@ content:
     type: collection
     path: assets/gallery_img
     list: true
-    view:
-      layout: tree
-      node:
-        filename: data/galleryData.json
-        hideDirs: others
     fields:
       - name: image
         label: "رفع الصورة"
