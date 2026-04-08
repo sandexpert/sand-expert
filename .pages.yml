@@ -6,8 +6,7 @@ content:
   - name: Upcoming
     label: "معرض الصور"
     type: collection
-    path: data/upcomingTrips
-    filename: "{primary}.json"
+    path: assets/gallery_img
     fields:
       - name: image
         label: "رفع الصورة"
