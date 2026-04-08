@@ -43,6 +43,7 @@ content:
             max: 35
           unique: true
       - name: publish_at
+        label: "تاريخ النشر"
         type: date
         hidden: true
         options:
