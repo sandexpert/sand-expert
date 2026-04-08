@@ -1,18 +1,13 @@
 media:
-  - name: All_Media
-    input: assets
-    output: assets
-    hidden: true
   - name: images
     label: "معرض الصور"
     input: assets/gallery_img
     output: /assets/gallery_img
     rename: safe
     categories: [image]
-  - name: docs
-    label: Documents
-    input: assets/content_img
-    output: /assets/content_img
+  - name: All_Media
+    input: assets
+    output: assets
     categories: [image]
       
 content:
