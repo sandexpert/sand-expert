@@ -1,6 +1,6 @@
 media:
   - name: images
-    label: Images
+    label: "معرض الصور"
     input: assets/gallery_img
     output: /assets/gallery_img
     rename: safe
