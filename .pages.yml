@@ -47,77 +47,77 @@ content:
           multiple:
             max: 35
           unique: true
-  - name: Upcoming
-    label: "الرحلات القادمة"
-    type: collection
-    path: data/upcomingTrips
-    filename: "{primary}.json"
-    view:
-      fields: [title,image,pricePerDay,date]
-      primary: title
-      sort: [date]
-      default:
-        sort: date
-        order: asc
-    fields:
-      - name: title
-        required: true
-        label: "العنوان"
-        type: string
-      - name: date
-        required: true
-        label: "تاريخ الرحلة"
-        type: date
-        default: " "
-        options:
-          format: yyyy-MM-dd
-      - name: duration
-        required: true
-        label: "عدد أيام الرحلة"
-        type: number
-        options:
-          min: 1
-          max: 69
-      - name: route
-        required: true
-        label: "مسار الرحلة"
-        type: string
-        list: true
-      - name: pricePerDay
-        required: true
-        label: "السعر لليوم الواحد"
-        type: number
-        options:
-          min: 1
-      - name: inclusions
-        required: true
-        label: "السعر شامل"
-        type: string
-        list: true
-      - name: itinerary
-        required: true
-        label: "السعر غير شامل"
-        type: string
-        list: true
-      - name: image
-        label: "الصورة الرئيسية"
-        type: image
-        required: true
-        options:
-          path: assets/upcomingTrips_img
-          rename: safe
-      - name: description
-        label: "نبذة عن الرحلة"
-        required: true
-        type: rich-text
-        options:
-          format: html
-          switcher: false
-          path: assets/content_img
-          rename: safe
-          multiple:
-            max: 35
-          unique: true
+- name: Upcoming
+  label: "الرحلات القادمة"
+  type: collection
+  path: data/upcomingTrips
+  filename: "{primary}.json"
+  view:
+    fields: [title,image,pricePerDay,date]
+    primary: title
+    sort: [date]
+    default:
+      sort: date
+      order: asc
+  fields:
+    - name: title
+      required: true
+      label: "العنوان"
+      type: string
+    - name: date
+      required: true
+      label: "تاريخ الرحلة"
+      type: date
+      default: " "
+      options:
+        format: yyyy-MM-dd
+    - name: duration
+      required: true
+      label: "عدد أيام الرحلة"
+      type: number
+      options:
+        min: 1
+        max: 69
+    - name: route
+      required: true
+      label: "مسار الرحلة"
+      type: string
+      list: true
+    - name: pricePerDay
+      required: true
+      label: "السعر لليوم الواحد"
+      type: number
+      options:
+        min: 1
+    - name: inclusions
+      required: true
+      label: "السعر شامل"
+      type: string
+      list: true
+    - name: itinerary
+      required: true
+      label: "السعر غير شامل"
+      type: string
+      list: true
+    - name: image
+      label: "الصورة الرئيسية"
+      type: image
+      required: true
+      options:
+        path: assets/upcomingTrips_img
+        rename: safe
+    - name: description
+      label: "نبذة عن الرحلة"
+      required: true
+      type: rich-text
+      options:
+        format: html
+        switcher: false
+        path: assets/content_img
+        rename: safe
+        multiple:
+          max: 35
+        unique: true
 
   - name: Index
     label: index.json
