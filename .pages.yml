@@ -31,7 +31,7 @@ content:
           unique: true
           rename: safe
       - name: article
-        label: "نص المقال"
+        label: "المحتوى"
         required: true
         type: rich-text
         options:
