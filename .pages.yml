@@ -11,7 +11,7 @@ content:
     view:
       fields: [title,image,published_at]
       primary: title
-      sort: [published_at, title]
+      sort: [published_at]
       default:
         sort: published_at
         order: desc
