@@ -1,7 +1,11 @@
+settings:
+  hide: true
+    
 media:
   input: assets
   output: assets
-
+  
+  
 content:
   - name: destinations
     label: "المقالات"
