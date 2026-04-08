@@ -1,16 +1,16 @@
 [
   {
-    "id": 176599970818339200,
+    "id": "176599970818339200",
     "title": "The Sbeiba Festival in Djanet (Illizi)",
-    "date": "2025-12-27",
     "image": "assets/upcomingTrips_img/176599970818339206.webp",
+    "date": "2026-05-01",
     "pricePerDay": 120
   },
   {
-    "id": 176600305448328670,
+    "id": "176600305448328670",
     "title": "Algeria by Motorcycle",
-    "date": "2026-02-18",
     "image": "assets/upcomingTrips_img/176600305448328670.webp",
+    "date": "2026-05-22",
     "pricePerDay": 200
   }
 ]
