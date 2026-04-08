@@ -1,0 +1,34 @@
+name: Update Content Indexes
+
+on:
+  push:
+    paths:
+      - 'public/data/destinations/*.json'
+      - 'public/data/upcomingTrips/*.json'
+    branches:
+      - main # أو اسم الفرع الرئيسي عندك
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # لإعطاء الصلاحية برفع التعديلات للمستودع
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate Indexes
+        run: node scripts/generate-indexes.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: auto-update content indexes" && git push)
