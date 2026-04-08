@@ -36,6 +36,7 @@ content:
           path: assets/articles_img
           unique: true
           rename: safe
+          categories: [image]
       - name: published_at
         label: "تاريخ النشر"
         type: date
