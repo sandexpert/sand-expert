@@ -3,20 +3,6 @@ media:
   output: assets
 
 content:
-  - name: Upcoming
-    label: "معرض الصور"
-    type: collection
-    path: assets/gallery_img
-    fields:
-      - name: image
-        label: "رفع الصورة"
-        type: image
-        required: true
-        options:
-          path: assets/gallery_img
-          rename: safe
-
-    #----------------------
   - name: destinations
     label: "المقالات"
     type: collection
@@ -132,7 +118,18 @@ content:
           multiple:
             max: 35
           unique: true
-
+  - name: gallery
+    label: "معرض الصور"
+    type: collection
+    path: assets/gallery_img
+    fields:
+      - name: image
+        label: "رفع الصورة"
+        type: image
+        required: true
+        options:
+          path: assets/gallery_img
+          rename: safe
   - name: Index
     label: index.json
     type: file
