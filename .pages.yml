@@ -11,9 +11,9 @@ content:
     path: data/destinations
     filename: "{primary}.json"
     view:
-      fields: [title]
+      fields: [title,publish_at,image]
       primary: title
-      sort: [date, title]
+      sort: [publish_at, title]
       default:
         sort: date
         order: desc
