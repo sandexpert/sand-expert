@@ -125,6 +125,7 @@ content:
     label: "معرض الصور"
     type: collection
     path: assets/gallery_img
+    list: true
     fields:
       - name: image
         label: "رفع الصورة"
