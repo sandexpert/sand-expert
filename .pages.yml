@@ -1,6 +1,6 @@
 media:
   - name: destinations
-    label: "Folder_Site_Images"
+    label: "ALL Site Images"
     input: assets
     output: assets
   
