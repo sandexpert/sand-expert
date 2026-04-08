@@ -2,6 +2,7 @@ media:
   - name: All_Media
     input: assets
     output: assets
+    hidden: true
   - name: images
     label: "معرض الصور"
     input: assets/gallery_img
