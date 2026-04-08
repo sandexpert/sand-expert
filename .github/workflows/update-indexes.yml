@@ -3,8 +3,8 @@ name: Update Content Indexes
 on:
   push:
     paths:
-      - 'data/destinations/*.json'
-      - 'data/upcomingTrips/*.json'
+      - '../data/destinations/*.json'
+      - '../data/upcomingTrips/*.json'
     branches:
       - main # تأكد أن هذا هو اسم فرعك
   workflow_dispatch: 
