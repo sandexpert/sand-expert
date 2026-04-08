@@ -11,11 +11,11 @@ content:
     path: data/destinations
     filename: "{primary}.json"
     view:
-      fields: [title,image,publish_at]
+      fields: [title,image,published_at]
       primary: title
-      sort: [publish_at, title]
+      sort: [published_at, title]
       default:
-        sort: publish_at
+        sort: published_at
         order: desc
     fields:
       - name: title
@@ -42,7 +42,7 @@ content:
           multiple:
             max: 35
           unique: true
-      - name: publish_at
+      - name: published_at
         label: "تاريخ النشر"
         type: date
         hidden: true
