@@ -125,11 +125,6 @@ content:
     label: "معرض الصور"
     type: collection
     path: assets/gallery_img
-    list: true
-    view:
-      fields: []
-      primary: 
-      sort: []
     fields:
       - name: image
         label: "رفع الصورة"
