@@ -17,7 +17,7 @@ content:
         order: desc
     fields:
       - name: sections
-        type: object
+        type: string
         list:
           collapsible:
             collapsed: true
