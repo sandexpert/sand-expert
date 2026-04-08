@@ -5,16 +5,12 @@ media:
     output: /assets/gallery_img
     rename: safe
     categories: [image]
-    actions:
-      - name: optimize-images
-        label: Optimize images
-        workflow: pages-cms-media-action.yml
   - name: docs
     label: Documents
     input: assets/content_img
     output: /assets/content_img
     categories: [image]
-
+      
 content:
   - name: destinations
     label: "المقالات"
