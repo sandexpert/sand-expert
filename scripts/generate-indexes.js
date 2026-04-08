@@ -33,23 +33,16 @@ collections.forEach(collection => {
 });
 
 // --- 2. تحديث معرض الصور (Gallery) ---
+// --- تحديث معرض الصور (Gallery) - مصفوفة بسيطة وبدون ترتيب ---
 const galleryDir = 'assets/gallery_img';
 const galleryOutput = 'data/galleryData.json';
 const galleryPath = path.join(process.cwd(), galleryDir);
 
 if (fs.existsSync(galleryPath)) {
     const images = fs.readdirSync(galleryPath)
-        .filter(file => /\.(webp|jpg|jpeg|png|gif)$/i.test(file)) // دعم كافة الصيغ
-        .map(file => {
-            const stats = fs.statSync(path.join(galleryPath, file));
-            return {
-                id: path.parse(file).name, // استخدام اسم الملف كـ ID
-                url: `${galleryDir}/${file}`,
-                uploadDate: stats.mtime.toISOString() // تاريخ آخر تعديل للملف
-            };
-        })
-        .sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate)); // الأحدث أولاً
+        .filter(file => /\.(webp|jpg|jpeg|png|gif)$/i.test(file)) // تصفية الصور فقط
+        .map(file => `${galleryDir}/${file}`); // تحويل اسم الملف مباشرة إلى مسار نصي
 
     fs.writeFileSync(path.join(process.cwd(), galleryOutput), JSON.stringify(images, null, 2));
-    console.log(`✅ Updated Gallery: ${galleryOutput}`);
+    console.log(`✅ Updated Gallery (Simple & Raw): ${galleryOutput}`);
 }
