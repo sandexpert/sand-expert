@@ -58,7 +58,7 @@ content:
       sort: [date]
       default:
         sort: date
-        order: desc
+        order: asc
     fields:
       - name: title
         required: true
