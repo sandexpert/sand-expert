@@ -16,7 +16,7 @@ content:
       sort: [publish_at, title]
       default:
         sort: date
-        order: desc
+        order: asc
     fields:
       - name: title
         required: true
