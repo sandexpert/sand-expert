@@ -20,6 +20,7 @@ content:
         type: object
         list:
           collapsible:
+            collapsed: true
             summary: "{title} ({index})"
         fields:
           - name: title
