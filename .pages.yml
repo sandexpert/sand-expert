@@ -18,14 +18,7 @@ content:
     fields:
       - name: sections
         type: string
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{CityName} ({index})"
-        fields:
-          - name: CityName
-            label: " "
-            type: string
+        list: true
       - name: title
         required: true
         label: "العنوان"
