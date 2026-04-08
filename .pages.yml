@@ -3,6 +3,7 @@ media:
     label: "ALL Site Images"
     input: assets
     output: assets
+    categories: [image]
   
   
 content:
