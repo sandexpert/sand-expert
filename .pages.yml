@@ -11,13 +11,12 @@ content:
     path: data/destinations
     filename: "{primary}.json"
     view:
-      layout: tree
-      node:
-        filename: data/destinations_index.json
-        hideDirs: others
-      fields: [title]
+      fields: [title,image,published_at]
       primary: title
-
+      sort: [published_at, title]
+      default:
+        sort: published_at
+        order: desc
     fields:
       - name: title
         required: true
@@ -31,6 +30,13 @@ content:
           path: assets/articles_img
           unique: true
           rename: safe
+      - name: published_at
+        label: "تاريخ النشر"
+        type: date
+        hidden: true
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss
       - name: article
         label: "المحتوى"
         required: true
@@ -43,13 +49,6 @@ content:
           multiple:
             max: 35
           unique: true
-      - name: published_at
-        label: "تاريخ النشر"
-        type: date
-        hidden: true
-        options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm:ss
   - name: Index
     label: index.json
     type: file
