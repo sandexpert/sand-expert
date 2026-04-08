@@ -8,7 +8,7 @@ media:
   - name: All_Media
     input: assets
     output: assets
-    categories: [image]
+    categories: [spreadsheet]
       
 content:
   - name: destinations
