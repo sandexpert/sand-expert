@@ -1,4 +1,8 @@
 media:
+  - name: Gallery
+    label: "معرض الصور"
+    input: assets/gallery_img
+    output: /assets/gallery_img
   - name: destinations
     label: "ALL Site Images"
     input: assets
