@@ -54,11 +54,11 @@ content:
     filename: "{primary}.json"
     view:
       fields: [title,image,pricePerDay,date]
-      primary: title
+      primary: date
       sort: [date]
       default:
         sort: date
-        order: desc
+        order: asc
     fields:
       - name: title
         required: true
