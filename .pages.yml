@@ -11,12 +11,13 @@ content:
     path: data/destinations
     filename: "{primary}.json"
     view:
-      fields: [title,image,published_at]
+      layout: tree
+      node:
+        filename: data/destinations_index.json
+        hideDirs: others
+      fields: [title]
       primary: title
-      sort: [published_at, title]
-      default:
-        sort: published_at
-        order: desc
+
     fields:
       - name: title
         required: true
