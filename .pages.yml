@@ -3,6 +3,21 @@ media:
   output: assets
 
 content:
+  - name: Upcoming
+    label: "الرحلات القادمة"
+    type: collection
+    path: data/upcomingTrips
+    filename: "{primary}.json"
+    fields:
+      - name: image
+        label: "رفع الصورة"
+        type: image
+        required: true
+        options:
+          path: assets/gallery_img
+          rename: safe
+
+    #----------------------
   - name: destinations
     label: "المقالات"
     type: collection
