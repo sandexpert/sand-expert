@@ -22,8 +22,8 @@ content:
           collapsible:
             summary: "{title} ({index})"
         fields:
-          - name: title
-            label: "s"
+          - name: CityName
+            label: ""
             type: string
       - name: title
         required: true
