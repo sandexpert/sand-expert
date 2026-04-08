@@ -54,7 +54,7 @@ content:
     filename: "{primary}.json"
     view:
       fields: [title,image,pricePerDay,date]
-      primary: date
+      primary: title
       sort: [date]
       default:
         sort: date
