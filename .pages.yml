@@ -17,6 +17,8 @@ content:
         order: desc
     fields:
       - name: sections
+        label: "مسار الرحلة"
+        required: true
         type: string
         list: true
       - name: title
