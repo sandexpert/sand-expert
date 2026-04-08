@@ -3,13 +3,13 @@ const path = require('path');
 
 const collections = [
     {
-        dir: 'public/data/destinations',
-        output: 'public/data/destinations_index.json',
+        dir: 'data/destinations',
+        output: 'data/destinations_index.json',
         fields: ['title', 'image']
     },
     {
-        dir: 'public/data/upcomingTrips',
-        output: 'public/data/upcomingTrips_index.json',
+        dir: 'data/upcomingTrips',
+        output: 'data/upcomingTrips_index.json',
         fields: ['title', 'image', 'date', 'pricePerDay']
     }
 ];
