@@ -131,4 +131,5 @@ content:
         label: "رفع الصورة"
         type: image
         options:
+          path: assets/gallery_img
           rename: safe
