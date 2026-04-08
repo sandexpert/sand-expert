@@ -130,8 +130,5 @@ content:
       - name: image
         label: "رفع الصورة"
         type: image
-        required: true
-        list: true
         options:
-          path: assets/gallery_img
           rename: safe
