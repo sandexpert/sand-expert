@@ -19,16 +19,11 @@ content:
       - name: sections
         type: object
         list:
-          min: 1
-          max: 6
           collapsible:
-            collapsed: true
             summary: "{title} ({index})"
         fields:
           - name: title
             type: string
-          - name: body
-            type: rich-text
       - name: title
         required: true
         label: "العنوان"
