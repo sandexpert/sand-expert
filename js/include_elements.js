@@ -95,7 +95,7 @@ async function loadGallery() {
         .map(
           (img) => `
                 <div class="card">
-                    <img src="/${img.url}" alt="Gallery Image">
+                    <img src="/${img}" alt="Gallery Image">
                 </div>
             `,
         )
