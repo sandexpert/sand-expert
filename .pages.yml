@@ -78,6 +78,13 @@ content:
         options:
           min: 1
           max: 69
+      - name: image
+        label: "الصورة الرئيسية"
+        type: image
+        required: true
+        options:
+          path: assets/upcomingTrips_img
+          rename: safe
       - name: route
         required: true
         label: "مسار الرحلة"
@@ -99,13 +106,6 @@ content:
         label: "السعر غير شامل"
         type: string
         list: true
-      - name: image
-        label: "الصورة الرئيسية"
-        type: image
-        required: true
-        options:
-          path: assets/upcomingTrips_img
-          rename: safe
       - name: description
         label: "نبذة عن الرحلة"
         required: true
