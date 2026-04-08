@@ -4,7 +4,7 @@ media:
 
 content:
   - name: Upcoming
-    label: "الرحلات القادمة"
+    label: "معرض الصور"
     type: collection
     path: data/upcomingTrips
     filename: "{primary}.json"
