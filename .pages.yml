@@ -15,7 +15,7 @@ content:
       primary: title
       sort: [publish_at, title]
       default:
-        sort: date
+        sort: publish_at
         order: desc
     fields:
       - name: title
