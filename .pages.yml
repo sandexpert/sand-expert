@@ -20,7 +20,7 @@ content:
         type: object
         list:
           collapsible:
-            summary: "{title} ({index})"
+            summary: "{CityName} ({index})"
         fields:
           - name: CityName
             label: " "
