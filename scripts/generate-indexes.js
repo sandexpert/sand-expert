@@ -4,13 +4,13 @@ const path = require('path');
 // تعريف المجلدات التي سنقوم بمسحها
 const collections = [
     {
-        dir: 'public/data/destinations',
-        output: 'public/data/destinations/index.json',
+        dir: 'data/destinations',
+        output: 'data/destinations_index.json',
         fields: ['title', 'image'] // الحقول التي نريدها في الفهرس
     },
     {
-        dir: 'public/data/upcomingTrips',
-        output: 'public/data/upcomingTrips/index.json',
+        dir: 'data/upcomingTrips',
+        output: 'data/upcomingTrips_index.json',
         fields: ['title', 'image', 'date', 'pricePerDay']
     }
 ];
