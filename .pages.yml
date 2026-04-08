@@ -1,6 +1,7 @@
 media:
   input: assets
   output: assets
+  categories: [spreadsheet]
 
 content:
   - name: destinations
