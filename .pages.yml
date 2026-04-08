@@ -4,7 +4,7 @@ media:
     input: assets/gallery_img
     output: /assets/gallery_img
     rename: safe
-    extensions: [png, jpg, webp]
+    categories: [image]
     actions:
       - name: optimize-images
         label: Optimize images
@@ -13,7 +13,7 @@ media:
     label: Documents
     input: assets/content_img
     output: /assets/content_img
-    categories: [document]
+    categories: [image]
 
 content:
   - name: destinations
