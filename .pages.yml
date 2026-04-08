@@ -129,9 +129,4 @@ content:
         required: true
         options:
           path: assets/gallery_img
-          rename: safe
-  - name: Index
-    label: index.json
-    type: file
-    path: data/destinations_index.json
-    
+          rename: safe    
