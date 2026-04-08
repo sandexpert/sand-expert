@@ -2,7 +2,7 @@ settings:
   hide: true
     
 media:
-  input: assets/articles_img
+  input: assets
   output: assets
   
   
