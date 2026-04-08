@@ -5,13 +5,14 @@ on:
     paths:
       - 'data/destinations/*.json'
       - 'data/upcomingTrips/*.json'
+      - 'assets/gallery_img/**' # مراقبة إضافة الصور هنا
   workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # ضروري جداً لرفع التعديلات
+      contents: write
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -19,7 +20,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # لجلب التاريخ الكامل للـ Git لضمان نجاح الـ Push
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -34,11 +35,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # التحقق من وجود تغييرات فعلياً قبل المحاولة
+          # إضافة ملفات الـ JSON في مجلد data لضمان تحديث المعرض والمقالات
           git add data/*.json
+          
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "docs: auto-update indexes"
-            git push origin HEAD # تحديد الوجهة بوضوح لتجنب خطأ الفروع
+            git commit -m "docs: auto-update gallery and indexes"
+            git push origin HEAD
           fi
