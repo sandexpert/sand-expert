@@ -23,7 +23,7 @@ content:
             summary: "{title} ({index})"
         fields:
           - name: title
-            label: ""
+            label: "s"
             type: string
       - name: title
         required: true
