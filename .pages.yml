@@ -18,7 +18,9 @@ content:
     fields:
       - name: sections
         type: object
-        list: true
+        list:
+          collapsible:
+            summary: "{title} ({index})"
         fields:
           - name: title
             type: string
