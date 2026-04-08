@@ -132,3 +132,4 @@ content:
         options:
           path: assets/gallery_img
           rename: safe
+          categories: [image]
