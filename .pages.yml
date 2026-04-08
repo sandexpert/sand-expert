@@ -20,6 +20,7 @@ content:
         type: object
         list:
           collapsible:
+            collapsed: true
             summary: "{CityName} ({index})"
         fields:
           - name: CityName
