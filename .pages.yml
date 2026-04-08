@@ -3,7 +3,7 @@ settings:
     
 media:
   input: assets
-  output: assets
+  output: assets/articles_img
   
   
 content:
