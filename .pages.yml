@@ -132,3 +132,4 @@ content:
         type: image
         options:
           rename: safe
+          categories: [image]
