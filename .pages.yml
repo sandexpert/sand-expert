@@ -23,7 +23,7 @@ content:
             summary: "{title} ({index})"
         fields:
           - name: CityName
-            label: ""
+            label: " "
             type: string
       - name: title
         required: true
