@@ -122,14 +122,3 @@ content:
           multiple:
             max: 35
           unique: true
-  - name: gallery
-    label: "معرض الصور"
-    type: collection
-    path: assets/gallery_img
-    fields:
-      - name: image
-        label: "رفع الصورة"
-        type: image
-        options:
-          rename: safe
-          categories: [image]
