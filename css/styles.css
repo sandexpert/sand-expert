@@ -94,7 +94,7 @@ header::after {
     content: "";
     display: block;
     height: 4px;
-    background-image: url("../assets/logo.webp") no-repeat center;
+    background-image: url("../assets2/logo.webp") no-repeat center;
     background-size: contain;
 }
 
@@ -180,7 +180,7 @@ img.nav-logo {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('..\\assets\\images\\06.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('..\\assets2\\images\\06.webp');
     background-size: cover;
     background-position: center;
     height: 30rem;
@@ -335,7 +335,7 @@ img.nav-logo {
 
 /* Footer */
 footer {
-    background-image: url(../assets/footer_bg.webp);
+    background-image: url(../assets2/footer_bg.webp);
     background-size: cover;
     color: var(--primary);
     padding: 0;
