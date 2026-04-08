@@ -2,8 +2,10 @@ settings:
   hide: true
     
 media:
-  input: assets
-  output: assets
+  - name: destinations
+    label: "Folder_Site_Images"
+    input: assets
+    output: assets
   
   
 content:
