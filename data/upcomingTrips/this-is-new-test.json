@@ -1,0 +1,45 @@
+{
+  "title": "this is new Test",
+  "date": "2026-05-09",
+  "duration": 10,
+  "image": "assets/upcomingTrips_img/mstghanm.jpg",
+  "route": [
+    "elouad",
+    "ouargla",
+    "gardhaia",
+    "Djanet",
+    "Tamenraset",
+    "Return on Same Way"
+  ],
+  "pricePerDay": 99,
+  "inclusions": [
+    "Hotel",
+    "Lseronse",
+    "text",
+    "hello"
+  ],
+  "excludes": [
+    "Gas",
+    "Diner",
+    "Orange",
+    "HxH"
+  ],
+  "itinerary": [
+    {
+      "itineraryDays": "namchi fi wilaiat wadi Sof w nara tbi3at al sha3b alsofi alkarim"
+    },
+    {
+      "itineraryDays": "ndckol ila wargla w togort"
+    },
+    {
+      "itineraryDays": "hona tabdo almgamara alhakikia< its Djanet"
+    },
+    {
+      "itineraryDays": "go to tasili Nadjer and amegas"
+    },
+    {
+      "itineraryDays": "nantaql ila tamenraset"
+    }
+  ],
+  "description": "<p>this Trip well be Perfect For One Persone Or Motho</p><img src=\"assets/content_img/img_1765999030817_229.webp\"><h2>can you wait?</h2><p>🚩this is imoje Test</p><h1>🐫⛺</h1><p>it is original way in this world</p>"
+}
