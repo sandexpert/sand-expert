@@ -3,7 +3,7 @@ media:
     label: "معرض الصور"
     input: assets/gallery_img
     output: /assets/gallery_img
-  - name: destinations
+  - name: ALL
     label: "ALL Site Images"
     input: assets
     output: assets
