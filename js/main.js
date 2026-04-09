@@ -107,29 +107,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         </div>
                         <div>
-                        ${
+                                                ${
                           trip.itinerary && trip.itinerary.length > 0
-                            ? `   
+                            ? ` 
                             <h3>Itinerary</h3>
-                            <ul id="t-itinerary" style="list-style: none; padding: 0; line-height: 2;">${trip.itinerary
+                            <ul id="t-itinerary" style="list-style: none; padding: 0; line-height: 2;">
+                            ${trip.itinerary
                               .map((item, index) => {
-                                let content = "";
-                                if (Array.isArray(item)) {
-                                  content = item
-                                    .map(
-                                      (act) =>
-                                        `<span class="itinerary-tag">${act}</span>`,
-                                    )
-                                    .join(" ");
-                                } else {
-                                  content = item;
-                                }
+                                // الوصول إلى القيمة داخل الكائن باستخدام المفتاح itineraryDays
+                                // نضع "" كقيمة افتراضية في حال كان الحقل فارغاً
+                                const content = item.itineraryDays || ""; 
+                                
                                 return `
                                 <li style="margin-bottom: 0.5rem;">
                                     <strong>Day ${index + 1}:</strong> ${content}
                                 </li>`;
                               })
-                              .join("")}</ul>`
+                              .join("")}
+                            </ul>`
                             : ""
                         }
                         </div>
