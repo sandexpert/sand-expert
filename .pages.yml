@@ -1,9 +1,10 @@
 media:
-  - name: ALL
-    label: "ALL Site Images"
+  - name: stock
+    label: "stock"
     input: assets
     output: assets
     categories: [image]
+    hidden: true
   - name: Gallery
     label: "معرض الصور"
     input: assets/gallery_img
