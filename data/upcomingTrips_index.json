@@ -14,13 +14,6 @@
     "pricePerDay": 220
   },
   {
-    "id": "test-upcoming-trip",
-    "title": "Test Upcoming Trip",
-    "image": "assets/gallery_img/flagmapofalgeriasvg.png",
-    "date": "2026-05-14",
-    "pricePerDay": 78
-  },
-  {
     "id": "this-is-new-test",
     "title": "this is new Test",
     "image": "assets/upcomingTrips_img/mstghanm.jpg",
