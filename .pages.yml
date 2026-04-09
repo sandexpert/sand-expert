@@ -115,7 +115,7 @@ content:
         list: true
       - name: itinerary
         label: "فعاليات الرحلة"
-        type: text
+        type: object
         list:
           collapsible:
             collapsed: true
