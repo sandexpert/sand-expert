@@ -286,6 +286,8 @@ img.nav-logo {
     gap: 1rem;
     background: var(--white);
     border-radius: var(--border-radius);
+    padding: 0.5rem;
+    box-shadow: 0 0 15px -10px black;
 }
 
 .cta-group {
