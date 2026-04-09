@@ -12,5 +12,12 @@
     "image": "assets/upcomingTrips_img/176600305448328670.webp",
     "date": "2026-06-25",
     "pricePerDay": 220
+  },
+  {
+    "id": "test-upcoming-trip",
+    "title": "Test Upcoming Trip",
+    "image": "assets/gallery_img/flagmapofalgeriasvg.png",
+    "date": "2026-05-14",
+    "pricePerDay": 78
   }
 ]
