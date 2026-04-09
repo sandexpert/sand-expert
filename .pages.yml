@@ -122,7 +122,7 @@ content:
             summary: " اليوم رقم: ({index})"
         fields:
         - name: title
-          label: summary
+          label: " "
           type: text
           
       - name: description
