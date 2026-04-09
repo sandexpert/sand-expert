@@ -3,12 +3,10 @@ media:
     label: "stock"
     input: assets
     output: assets
-    categories: [image]
   - name: Gallery
     label: "معرض الصور"
     input: assets/gallery_img
     output: /assets/gallery_img
-    categories: [image]
   
   
 content:
@@ -120,7 +118,6 @@ content:
         required: true
         type: rich-text
         options:
-          categories: [image]
           format: html
           switcher: false
           path: assets/content_img
