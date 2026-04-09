@@ -108,11 +108,19 @@ content:
         label: "السعر شامل"
         type: string
         list: true
-      - name: itinerary
+      - name: excludes
         required: true
         label: "السعر غير شامل"
         type: string
         list: true
+      - name: itinerary
+        label: "فعاليات الرحلة"
+        type: text
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{اليوم رقم:} ({index})"
+
       - name: description
         label: "نبذة عن الرحلة"
         required: true
