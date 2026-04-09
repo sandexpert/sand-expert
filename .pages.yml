@@ -119,9 +119,10 @@ content:
         list:
           collapsible:
             collapsed: true
+            summary: " اليوم رقم: ({index})"
         fields:
         - name: title
-          label: " اليوم رقم: ({index})"
+          label: summary
           type: text
           
       - name: description
