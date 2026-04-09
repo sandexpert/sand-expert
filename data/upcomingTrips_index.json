@@ -12,12 +12,5 @@
     "image": "assets/upcomingTrips_img/176600305448328670.webp",
     "date": "2026-06-25",
     "pricePerDay": 220
-  },
-  {
-    "id": "this-is-new-test",
-    "title": "this is new Test",
-    "image": "assets/upcomingTrips_img/mstghanm.jpg",
-    "date": "2026-05-09",
-    "pricePerDay": 99
   }
 ]
