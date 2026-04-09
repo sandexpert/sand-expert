@@ -120,6 +120,7 @@ content:
         required: true
         type: rich-text
         options:
+          categories: [image]
           format: html
           switcher: false
           path: assets/content_img
