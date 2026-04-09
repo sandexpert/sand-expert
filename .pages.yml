@@ -1,13 +1,14 @@
 media:
-  - name: Gallery
-    label: "معرض الصور"
-    input: assets/gallery_img
-    output: /assets/gallery_img
   - name: ALL
     label: "ALL Site Images"
     input: assets
     output: assets
     categories: [image]
+  - name: Gallery
+    label: "معرض الصور"
+    input: assets/gallery_img
+    output: /assets/gallery_img
+  
   
   
 content:
