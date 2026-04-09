@@ -120,7 +120,10 @@ content:
           collapsible:
             collapsed: true
             summary: "{اليوم رقم:} ({index})"
-
+        fields:
+        - name: title
+          type: text
+          
       - name: description
         label: "نبذة عن الرحلة"
         required: true
