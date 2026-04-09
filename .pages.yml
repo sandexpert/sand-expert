@@ -121,7 +121,7 @@ content:
             collapsed: true
             summary: " اليوم رقم: ({index})"
         fields:
-        - name: title
+        - name: itineraryDays
           label: " "
           type: text
           
