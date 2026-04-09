@@ -1,0 +1,27 @@
+{
+  "title": "Test Upcoming Trip",
+  "date": "2026-05-14",
+  "duration": 12,
+  "image": "assets/gallery_img/flagmapofalgeriasvg.png",
+  "route": [
+    "الوادي",
+    "ورقلة",
+    "غرداية",
+    "جانت",
+    "تمنراست",
+    "ثم العودة على نفس الخط"
+  ],
+  "pricePerDay": 78,
+  "inclusions": [
+    "الاقامة \"يمكنك رؤية تفاصيل الفندق في الأسفل\"",
+    "المرشد السياحي",
+    "مصاريف الفيزا",
+    "مصاريف العبور بين الولايات",
+    "تأمين السيارة أو الدراجة"
+  ],
+  "itinerary": [
+    "البنزين",
+    "الأكل الجانبي"
+  ],
+  "description": "<p>this is comrcial Trip in the world, thanks for every Thing and</p><h2>this is hotel Information</h2><p></p><p></p>"
+}
