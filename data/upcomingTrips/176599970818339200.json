@@ -4,9 +4,9 @@
   "duration": 4,
   "image": "assets/upcomingTrips_img/176599970818339206.webp",
   "route": [
-    "El Oued",
-    "Touggourt",
-    "Ouargla",
+    "Djanit ",
+    "Djanit ",
+    "Djanit ",
     "Illizi"
   ],
   "pricePerDay": 123,
@@ -15,10 +15,11 @@
     "Transportation",
     "Guided Activities",
     "Meals and Beverages",
-    "Professional Tour Guides"
+    "Professional Tour Guides",
+    "Nighttime gatherings "
   ],
   "excludes": [
-    "Gazoolin"
+    "Welcome "
   ],
   "itinerary": [
     {
