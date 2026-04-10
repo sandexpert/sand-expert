@@ -12,5 +12,12 @@
     "image": "assets/upcomingTrips_img/176600305448328670.webp",
     "date": "2026-06-25",
     "pricePerDay": 220
+  },
+  {
+    "id": "vavvav",
+    "title": "Vavvav",
+    "image": "assets/upcomingTrips_img/screenshot20260410-091022gmail.jpg",
+    "date": "2026-05-21",
+    "pricePerDay": 120
   }
 ]
