@@ -1,15 +1,16 @@
 {
   "title": "The Sbeiba Festival in Djanet (Illizi)",
   "date": "2026-06-29",
-  "duration": 4,
+  "duration": 5,
   "image": "assets/upcomingTrips_img/176599970818339206.webp",
   "route": [
+    "Algeria capital ",
     "Djanit ",
     "Djanit ",
     "Djanit ",
-    "Illizi"
+    "Algeria capital "
   ],
-  "pricePerDay": 123,
+  "pricePerDay": 135,
   "inclusions": [
     "Accommodation",
     "Transportation",
@@ -19,7 +20,8 @@
     "Nighttime gatherings "
   ],
   "excludes": [
-    "Welcome "
+    "Visa fee ",
+    "Airfare "
   ],
   "itinerary": [
     {
@@ -29,5 +31,5 @@
       "itineraryDays": "x2"
     }
   ],
-  "description": "<p>The Sbeiba festival is an extraordinary cultural event celebrated annually in the oasis of Djanet, in the heart of the Tassili n'Ajjer region.</p><p>This ancient Tuareg tradition, which has been inscribed on UNESCO’s List of the Intangible Cultural Heritage of Humanity, coincides with the Islamic celebration of Ashura.</p><p>Historically, the festival marks a peace treaty signed between two rival Tuareg tribes—the El Mihan and the Azellouaz—ending a long period of conflict.</p><p>To commemorate this peace, the two communities engage in a symbolic ritual that is part-dance and part-mock battle.</p><p><br></p>"
+  "description": "<p>The Sbeiba festival is an extraordinary cultural event celebrated annually in the oasis of Djanet, in the heart of the Tassili n'Ajjer region.</p><p>This ancient Tuareg tradition, which has been inscribed on UNESCO’s List of the Intangible Cultural Heritage of Humanity, coincides with the Islamic celebration of Ashura.</p><p>Historically, the festival marks a peace treaty signed between two rival Tuareg tribes—the El Mihan and the Azellouaz—ending a long period of conflict.</p><p>To commemorate this peace, the two communities engage in a symbolic ritual that is part-dance and part-mock battle.</p><img src=\"assets/content_img/FB_IMG_1690628655803.jpg\"><img src=\"assets/content_img/FB_IMG_1757103215939.jpg\"><p><br></p>"
 }
