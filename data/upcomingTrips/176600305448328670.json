@@ -27,9 +27,15 @@
     "benzene "
   ],
   "itinerary": [
-    {},
-    {},
-    {},
+    {
+      "itineraryDays": "Entry is through the border crossing between Algeria (Taleb Larbi) and Tunisia (Hazwa). Our guide will handle all entry procedures. The process usually takes 3 hours, depending on the queue. We then proceed to Touggourt city  for an overnight stay at a hotel. The distance is 180 km "
+    },
+    {
+      "itineraryDays": "In the morning, we will head from Touggourt towards Hassi Messaoud and stay overnight at the TFT residence. The distance is approximately 600 km on a paved road. "
+    },
+    {
+      "itineraryDays": "In the morning we head towards Ain Amenas, then spend the night in the city of Illizi in a hotel. The distance traveled is 520 km. "
+    },
     {},
     {},
     {},
@@ -43,5 +49,5 @@
     {},
     {}
   ],
-  "description": "<p>An original motorcycle journey to discover Algeria, through oases, desert, and breathtaking natural scenery.</p><p>An adventure steeped in majestic landscapes, ancient cities, and an authentic and vibrant culture. Crossing this vast North African country on two wheels means enjoying a unique experience, amidst fascinating roads, genuine encounters, and ever-changing panoramas.</p><p><br></p><p><strong>Entry through the border gate between Tunisia and Algeria. </strong></p><p><br></p><p>An itinerary designed to discover Algeria in all its diversity: from the desert regions on the edge of the Saharan Atlas to the immense expanses of sand and dunes over 100 meters high.</p><p></p><p><br></p><p><br></p><p></p><p></p>"
+  "description": "<p>An original motorcycle journey to discover Algeria, through oases, desert, and breathtaking natural scenery.</p><p>An adventure steeped in majestic landscapes, ancient cities, and an authentic and vibrant culture. Crossing this vast North African country on two wheels means enjoying a unique experience, amidst fascinating roads, genuine encounters, and ever-changing panoramas.</p><p><br></p><p><strong>Entry through the border gate between Tunisia and Algeria.</strong></p><p><br></p><p>An itinerary designed to discover Algeria in all its diversity: from the desert regions on the edge of the Saharan Atlas to the immense expanses of sand and dunes over 100 meters high.Then enter the Tassili N'Ajjer Mountains. An open-air museum. With its towering vertical mountains and red sands. </p><p></p><p><br></p><p><br></p><img src=\"assets/content_img/IMG_20250930_080042.jpg\"><p></p><p></p>"
 }
