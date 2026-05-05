@@ -1,6 +1,6 @@
 {
   "title": "4x4 off-road driving tour program ",
-  "date": "2026-06-29",
+  "date": "2026-10-05",
   "duration": 14,
   "image": "assets/upcomingTrips_img/img-20260327-wa0045.jpg",
   "route": [
@@ -24,7 +24,7 @@
   ],
   "excludes": [
     "Visa fee ",
-    "Airfare "
+    "gasoline "
   ],
   "itinerary": [
     {
@@ -70,5 +70,5 @@
       "itineraryDays": " In the morning, we head towards the Taleb Larbi border crossing\n📝 Upon arrival, our guide will handle the exit procedures"
     }
   ],
-  "description": "<p>A desert adventure with us. To be experienced, not just described. </p>"
+  "description": "<p>A desert adventure with us. To be experienced, not just described.</p>"
 }
