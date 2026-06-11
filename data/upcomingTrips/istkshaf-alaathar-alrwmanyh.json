@@ -25,5 +25,23 @@
   "excludes": [
     "flight tickets "
   ],
-  "description": "<p>Welcome to the enchanting Tadrart desert </p>"
+  "itinerary": [
+    {
+      "itineraryDays": " You will be met at Algiers airport by our guide, who will handle the entry procedures. At midnight, the plane will depart for Djanet. Our team will be waiting to transfer the trip participants to a hotel in downtown Djanet. "
+    },
+    {
+      "itineraryDays": "We leave the hotel In the morning we head towards the enchanting Tadrart desert. We have lunch in the Amais Valley under the shade of giant acacia trees. We enter the Al-Birj Valley in Tadrart where we will spend the night and camp among the sands and towering mountains. "
+    },
+    {
+      "itineraryDays": "After breakfast, we head towards Moul Naga, a mixed area of sand dunes and mountains, where we hike and then discover the cathedral arches. Afterwards, we have lunch in the shade of the mountains and explore the Izawaten Valley and its breathtaking scenery. In the evening, we join the campsite. "
+    },
+    {
+      "itineraryDays": "In the morning we explore the beautiful rock paintings, then have lunch in the Tinthac Valley, and visit the famous Hedgehog Rock. In the evening we hike up the red dunes of Tin Merzouga and watch the breathtaking sunset. "
+    },
+    {
+      "itineraryDays": "We set off in the morning from Tin Marzouka towards Wadi Bouhdiane to discover the caves, the shaped vertical rocks and rock arches. We have lunch under the shade of the acacia trees in Wadi Injran, which contains many surprises and rock engravings. We spend the night and camp in the black sand dunes of Iglatin. "
+    },
+    {}
+  ],
+  "description": "<p>Welcome to the enchanting Tadrart desert</p>"
 }
