@@ -1,17 +1,29 @@
 {
-  "title": "Explore the Roman ruins in Algeria ",
-  "date": "2026-10-01",
-  "duration": 5,
-  "image": "assets/upcomingTrips_img/img-20260323-wa0005.jpg",
+  "title": "Journeys to Tassili n'Ajjer (Tadrart red ) ",
+  "date": "2026-10-28",
+  "duration": 6,
+  "image": "assets/upcomingTrips_img/img20260303101712.jpg",
   "route": [
-    "capital. Tipaza. Cherchell. Constantine. Timgad . Setif "
+    "capital Algeria ",
+    "Djanit.  Tadrart Desert ",
+    "Tadrart Desert ",
+    "Tadrart Desert ",
+    "Tadrart Desert ",
+    "Tadrart Desert .Djanet  ",
+    "capital Algeria "
   ],
-  "pricePerDay": 130,
+  "pricePerDay": 107,
   "inclusions": [
-    "Hotel. Breakfast, Dinner, Lunch, Guide, Transportation "
+    "2 nights at the hotel ",
+    "Travel in four-wheel drive vehicles ",
+    "Professional Tuareg guide ",
+    "Cook and his assistant ",
+    "tent, mattress cover for one person ",
+    "Breakfast. Lunch. Dinner. ",
+    "Round-trip airport transfer to hotel "
   ],
   "excludes": [
-    "International flight tickets. Visa fees. "
+    "flight tickets "
   ],
-  "description": "<p></p>"
+  "description": "<p>Welcome to the enchanting Tadrart desert </p>"
 }
