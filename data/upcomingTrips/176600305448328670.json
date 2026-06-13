@@ -7,15 +7,17 @@
     "border gate.El Oued Alg. Tozeur Tns ",
     "Touggourt ",
     "Ouargla. Hassi Messaoud ",
-    "Hassi Balqabour ",
+    "Hassi Balqabour . Tin Fue ",
     "Ain Amenas ",
     "Illizi ",
     "Ihrir Oases ",
-    "Djanit "
+    "Djanit ",
+    "Tikopawen Desert ",
+    "Essendeln Desert "
   ],
-  "pricePerDay": 128,
+  "pricePerDay": 120,
   "inclusions": [
-    "14 notti in camera doppia in hotel 3/4/5* o migliori in loco",
+    "09 notti in camera doppia in hotel 3/4/5* o migliori in loco",
     "Le colazioni e cene come da programma",
     "Guida locale su mezzo di supporto",
     "Our agency handles visa applications. ",
@@ -40,10 +42,13 @@
       "itineraryDays": "We depart from Illizi in the morning towards Djanet. We cross the Tassili N'Ajjer mountains. We cover a distance of 400 km and stay overnight at the Hotel Ténéré. "
     },
     {
-      "itineraryDays": "In the morning, we continue our tour with an exploration of panoramic views and rock carvings and drawings. Then we head to the Essendeln Valley to camp in the high sand dunes. "
+      "itineraryDays": "In the morning, We park our motorcycles in the hotel's private parking lot.Then we ride in four-wheel drive vehicles with the agency team.  we continue our tour with an exploration of panoramic views and rock carvings and drawings. Then we head to the Tikopawin Mountains and Sands  to camp in the high sand dunes. "
     },
     {
-      "itineraryDays": "We set off in the morning to cross towards Erg Ader, then discover the rock carving of the weeping cow. Afterwards, we enter the town of Djanet to explore the local Tuareg market selling traditional crafts. In the evening, we head to the hotel for the night. "
+      "itineraryDays": "In the morning, we set off from the camp towards the Isendiln Valley, where we explore oases inhabited by nomadic Tuareg people. We delve deeper into the oasis, hiking and exploring on foot. Afterwards, we head to camp in the high sand dunes to watch the enchanting sunset. "
+    },
+    {
+      "itineraryDays": "We set off in the morning to cross towards high sand dunes Erg Admer, then discover the rock carving of the weeping cow. Afterwards, we enter the town of Djanet to explore the local Tuareg market selling traditional crafts. In the evening, we head to the hotel for the night."
     },
     {
       "itineraryDays": "In the morning we set off towards Djanet. On the way, after 200 km, we discover the Iherir oasis, then continue our journey to spend the night at the El-Ezzi Hotel. "
