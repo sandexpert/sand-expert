@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h4 style="margin-bottom: 1rem;font-weight: bold;">Follow our Adventures</h4>
                 <div class="social-links">
                     <a href="https://instagram.com/sand.expert.tourism_"><img class="social-icon" src="assets2/icons/instagram.svg" alt="instagram"></a>
-                    <a href="#"><img class="social-icon" src="assets2/icons/facebook.svg" alt="facebook"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61584878969028"><img class="social-icon" src="assets2/icons/facebook.svg" alt="facebook"></a>
                     <a href="#"><img class="social-icon" src="assets2/icons/tiktok.svg" alt="tiktok"></a>
                     <a href="#"><img class="social-icon" src="assets2/icons/youtube.svg" alt="youtube"></a>
                     <a href="#"><img class="social-icon" src="assets2/icons/linkedin.svg" alt="linkedin"></a>
