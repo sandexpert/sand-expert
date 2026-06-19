@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div>
                 <h4 style="margin-bottom: 1rem;font-weight: bold;">Follow our Adventures</h4>
                 <div class="social-links">
-                    <a href="https://instagram.com/sand.expert"><img class="social-icon" src="assets2/icons/instagram.svg" alt="instagram"></a>
+                    <a href="https://instagram.com/sand.expert.tourism_"><img class="social-icon" src="assets2/icons/instagram.svg" alt="instagram"></a>
                     <a href="#"><img class="social-icon" src="assets2/icons/facebook.svg" alt="facebook"></a>
                     <a href="#"><img class="social-icon" src="assets2/icons/tiktok.svg" alt="tiktok"></a>
                     <a href="#"><img class="social-icon" src="assets2/icons/youtube.svg" alt="youtube"></a>
@@ -106,7 +106,7 @@ async function loadGallery() {
     const instagramCard = document.createElement("div");
     instagramCard.className = "card gallery-card instagram-card";
     instagramCard.innerHTML = `
-            <a href="https://instagram.com/sand.expert" target="_blank" style="display:block; position:relative; height:100%;">
+            <a href="https://instagram.com/sand.expert.tourism_" target="_blank" style="display:block; position:relative; height:100%;">
                 <img src="/assets2/last_gallery.webp" alt="More on Instagram" style="height:100%; object-fit:cover;">
                 <div class="gallery-overlay">
                     <span>Click here To More</span>
