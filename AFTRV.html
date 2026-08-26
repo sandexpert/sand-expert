@@ -35,7 +35,6 @@
             padding: 20px;
         }
 
-        /* Container & Form Styling */
         .form-card {
             background: var(--white);
             width: 100%;
@@ -49,7 +48,7 @@
 
         .header-section {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             padding: 20px;
             border: 2px solid var(--primary);
             border-radius: 12px;
@@ -96,6 +95,8 @@
             outline: none;
             resize: none;
             width: 100%;
+            background: #fff;
+            font-family: inherit;
         }
 
         input:focus,
@@ -105,10 +106,91 @@
             box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
         }
 
-        /* Stylish Date Picker */
-        input[type="date"] {
+        /* Custom Flag Dropdown */
+        .phone-group-wrapper {
+            display: flex;
+            gap: 8px;
+            position: relative;
+        }
+
+        .custom-select-wrapper {
+            position: relative;
+            flex: 1.2;
+            user-select: none;
+        }
+
+        .custom-select-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 10px 14px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
             cursor: pointer;
-            font-family: inherit;
+            background: #fff;
+            height: 100%;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary);
+            transition: all 0.2s;
+        }
+
+        .custom-select-trigger:hover,
+        .custom-select-wrapper.open .custom-select-trigger {
+            border-color: var(--accent);
+        }
+
+        .custom-select-trigger img {
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+
+        .custom-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            width: 130px;
+            background: #fff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            max-height: 220px;
+            overflow-y: auto;
+            z-index: 50;
+        }
+
+        .custom-select-wrapper.open .custom-options {
+            display: block;
+        }
+
+        .custom-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .custom-option:hover {
+            background: #f1f5f9;
+        }
+
+        .custom-option img {
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Form Action Buttons */
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .submit-btn {
@@ -120,12 +202,12 @@
             font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
-            margin-top: 20px;
             transition: all 0.3s;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
+            flex: 2;
         }
 
         .submit-btn:hover {
@@ -134,31 +216,169 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
+        .cancel-btn {
+            background: #a8a8a8;
+            color: white;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .cancel-btn:hover {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        /* Review Card UI */
+        .update-banner {
+            display: none;
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #86efac;
+            padding: 14px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 1rem;
+            animation: fadeInScale 0.4s ease-out;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .app-id-badge {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .review-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-item.full {
+            grid-column: span 2;
+        }
+
+        .review-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .review-value {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 3px;
+            word-break: break-word;
+        }
+
         /* Success State UI */
         #success-message {
             display: none;
             text-align: center;
-            padding: 60px 20px;
+            padding: 20px 10px;
             animation: fadeInScale 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .success-icon {
-            font-size: 80px;
+            font-size: 65px;
             color: var(--success);
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .success-title {
-            font-size: 5.5vw;
+            font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 15px;
-            font-weight: bolder;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        .success-text {
-            color: #64748b;
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .app-id-box {
+            background: #f1f5f9;
+            border: 2px dashed #94a3b8;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .app-id-box .label-text {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #475569;
+            text-transform: uppercase;
+        }
+
+        .app-id-box .code-val {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+        }
+
+        .copy-badge-btn {
+            background: var(--white);
+            border: 1px solid #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            color: var(--text);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .copy-badge-btn:hover {
+            background: #e2e8f0;
+        }
+
+        .success-instruction {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 14px;
+            border-radius: 8px;
+            color: #92400e;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            text-align: left;
         }
 
         @keyframes fadeInScale {
@@ -166,21 +386,23 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
-
             to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
 
-        /* Responsive */
         @media (max-width: 650px) {
-            .grid {
+            .grid, .review-grid {
                 grid-template-columns: 1fr;
             }
 
-            .full-width {
+            .full-width, .review-item.full, .form-actions {
                 grid-column: span 1;
+            }
+
+            .form-actions {
+                flex-direction: column-reverse;
             }
 
             .form-card {
@@ -192,60 +414,68 @@
 
 <body>
 
-    <div class="form-card" id="formContainer">
+    <!-- 1. نموذج تقديم الطلب / التعديل -->
+    <div class="form-card" id="formContainer" style="display: none;">
         <div class="header-section">
-            <h1>Application Form to Regularization Visa</h1>
+            <h1 id="formHeaderTitle">Application Form to Regularization Visa</h1>
         </div>
 
         <form id="visaForm" class="grid">
             <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="sur-name" placeholder="" required autocomplete="off" autocorrect="off">
+                <label>First Name</label>
+                <input type="text" name="sur-name" class="notranslate" translate="no" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" name="last-name" placeholder="" required autocomplete="off" autocorrect="off">
+                <input type="text" name="last-name" class="notranslate" translate="no" required autocomplete="off">
             </div>
 
             <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" class="notranslate" translate="no" placeholder="example@domain.com" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <div class="phone-group-wrapper">
+                    <!-- القائمة المخصصة للأعلام ورموز الاتصال -->
+                    <div class="custom-select-wrapper notranslate" translate="no" id="customCountrySelect">
+                        <div class="custom-select-trigger" id="selectTrigger">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <img id="currentFlag" src="https://flagcdn.com/it.svg" width="30" alt="Flag">
+                                <span id="currentCode">+39</span>
+                            </div>
+                            <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: #64748b;"></i>
+                        </div>
+                        <div class="custom-options" id="customOptions">
+                            <div class="custom-option" data-code="+39" data-flag="it"><img src="https://flagcdn.com/it.svg" width="30" alt=""> <span>+39</span></div>
+                            <div class="custom-option" data-code="+33" data-flag="fr"><img src="https://flagcdn.com/fr.svg" width="30" alt=""> <span>+33</span></div>
+                            <div class="custom-option" data-code="+49" data-flag="de"><img src="https://flagcdn.com/de.svg" width="30" alt=""> <span>+49</span></div>
+                            <div class="custom-option" data-code="+34" data-flag="es"><img src="https://flagcdn.com/es.svg" width="30" alt=""> <span>+34</span></div>
+                            <div class="custom-option" data-code="+44" data-flag="gb"><img src="https://flagcdn.com/gb.svg" width="30" alt=""> <span>+44</span></div>
+                            <div class="custom-option" data-code="+31" data-flag="nl"><img src="https://flagcdn.com/nl.svg" width="30" alt=""> <span>+31</span></div>
+                            <div class="custom-option" data-code="+32" data-flag="be"><img src="https://flagcdn.com/be.svg" width="30" alt=""> <span>+32</span></div>
+                            <div class="custom-option" data-code="+41" data-flag="ch"><img src="https://flagcdn.com/ch.svg" width="30" alt=""> <span>+41</span></div>
+                            <div class="custom-option" data-code="+46" data-flag="se"><img src="https://flagcdn.com/se.svg" width="30" alt=""> <span>+46</span></div>
+                            <div class="custom-option" data-code="+43" data-flag="at"><img src="https://flagcdn.com/at.svg" width="30" alt=""> <span>+43</span></div>
+                        </div>
+                        <input type="hidden" name="phone_country_code" id="phoneCountryCode" value="+39">
+                    </div>
+
+                    <input type="tel" name="phone_number" id="phoneNumberInput" class="notranslate" translate="no" placeholder="123456789" required autocomplete="off" style="flex: 2;" inputmode="numeric">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
                 <label>Date of Birth</label>
                 <div style="display: flex; gap: 10px;">
-                    <select name="dob_day" required style="flex:1.3;">
+                    <select name="dob_day" class="notranslate" translate="no" required style="flex:1.2;">
                         <option value="" disabled selected>Day</option>
-                        <!-- Days 1-31 -->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
+                        <script>
+                            for(let i=1; i<=31; i++) document.write(`<option value="${i}">${i}</option>`);
+                        </script>
                     </select>
-                    <select name="dob_month" required style="flex:2;">
+                    <select name="dob_month" class="notranslate" translate="no" required style="flex:2;">
                         <option value="" disabled selected>Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -260,32 +490,27 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <input type="text" name="dob_year" required placeholder="Year" style="flex:1.5;" title="Enter year">
+                    <input type="text" name="dob_year" id="dobYear" class="notranslate" translate="no" required placeholder="YYYY" 
+                           maxlength="4" minlength="4" inputmode="numeric" pattern="[0-9]{4}" 
+                           title="Please enter a valid 4-digit year" style="flex:1.4;">
                 </div>
-            </div>
-            <div class="form-group">
-                <label>Place of Birth</label>
-                <input type="text" name="pob" placeholder="City, Country" required autocomplete="off" autocorrect="off">
             </div>
 
             <div class="form-group">
                 <label>Current Nationality</label>
-                <input type="text" name="current_nationality" placeholder="" required autocomplete="off"
-                    autocorrect="off">
+                <input type="text" name="current_nationality" class="notranslate" translate="no" required autocomplete="off">
             </div>
+
             <div class="form-group">
                 <label>Original Nationality</label>
-                <input type="text" name="original_nationality" placeholder="" required autocomplete="off"
-                    autocorrect="off">
+                <input type="text" name="original_nationality" class="notranslate" translate="no" required autocomplete="off">
             </div>
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="text" name="phone_number" placeholder="" required autocomplete="off" autocorrect="off">
-            </div>
+
             <div class="form-group">
                 <label>Profession</label>
-                <input type="text" name="profession" placeholder="" required autocomplete="off" autocorrect="off">
+                <input type="text" name="profession" class="notranslate" translate="no" required autocomplete="off">
             </div>
+
             <div class="form-group">
                 <label>Family Status</label>
                 <select name="family_status" required>
@@ -298,31 +523,113 @@
             </div>
 
             <div class="form-group full-width">
-                <label>Address:</label>
-                <textarea name="address" rows="2" placeholder="Full address details..." required autocomplete="off"
-                    autocorrect="off"></textarea>
+                <label>Address</label>
+                <textarea name="address" rows="2" class="notranslate" translate="no" placeholder="Full address details..." required autocomplete="off"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn full-width" id="submitBtn">
-                <span>SUBMIT APPLICATION</span>
-                <i class="fas fa-paper-plane"></i>
-            </button>
+            <!-- أزرار الحفظ والإلغاء -->
+            <div class="form-actions full-width">
+                <button type="button" class="cancel-btn" id="cancelEditBtn">
+                    <span>CANCEL UPDATE</span>
+                </button>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="submitBtnText">SUBMIT APPLICATION</span>
+                </button>
+            </div>
         </form>
     </div>
 
-    <div id="success-message">
+    <!-- 2. بطاقة مراجعة الطلب المحفوظ -->
+    <div class="form-card" id="reviewContainer" style="display: none;">
+        
+        <div class="header-section">
+            <h1>Your Application Status</h1>
+        </div>
+
+        <!-- تنبيه حفظ التعديلات -->
+        <div class="update-banner" id="updateNotice">
+            <i class="fas fa-check-circle" style="margin-right: 6px;"></i> The changes were saved successfully.
+        </div>
+
+
+        <div class="review-meta">
+            <span>Application ID:</span>
+            <span class="app-id-badge notranslate" translate="no" id="revAppId">---</span>
+        </div>
+
+        <div class="review-grid">
+            <div class="review-item">
+                <span class="review-label">Full Name</span>
+                <span class="review-value notranslate" translate="no" id="revFullName">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Email</span>
+                <span class="review-value notranslate" translate="no" id="revEmail">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Phone</span>
+                <span class="review-value notranslate" translate="no" id="revPhone">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Date of Birth</span>
+                <span class="review-value notranslate" translate="no" id="revDob">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Nationality</span>
+                <span class="review-value notranslate" translate="no" id="revNationality">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Profession</span>
+                <span class="review-value notranslate" translate="no" id="revProfession">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Family Status</span>
+                <span class="review-value notranslate notranslate" translate="no" id="revStatus">---</span>
+            </div>
+            <div class="review-item full">
+                <span class="review-label">Address</span>
+                <span class="review-value notranslate" translate="no" id="revAddress">---</span>
+            </div>
+        </div>
+
+        <button type="button" class="submit-btn" id="editBtn" style="width: 100%; margin-top: 20px;">
+            <i class="fas fa-pen-to-square"></i>
+            <span>EDIT APPLICATION</span>
+        </button>
+    </div>
+
+    <!-- 3. شاشة الشكر وإتمام الإرسال (للطلبات الجديدة فقط) -->
+    <div class="form-card" id="success-message">
         <div class="success-icon">
             <i class="fas fa-check-circle"></i>
         </div>
         <h2 class="success-title">Submission Successful!</h2>
-        <p class="success-text">
-            Your application has been received and is being processed.
-        </p>
+        
+        <div class="app-id-box">
+            <span class="label-text">Your Application ID</span>
+            <span class="code-val notranslate" translate="no" id="successAppId">SAND-EXPERT-000000</span>
+            <button type="button" class="copy-badge-btn" id="copyIdBtn">
+                <i class="fas fa-copy"></i>
+                <span id="copyBtnText">Copy ID</span>
+            </button>
+        </div>
+
+        <div class="success-instruction">
+            <i class="fas fa-camera" style="margin-right: 6px;"></i>
+            <strong>Important:</strong> Please take a <strong>screenshot</strong> of this screen or copy your <strong>Application ID</strong> and send it directly to the person in charge of your trip.
+        </div>
+
+        <button type="button" class="submit-btn" id="viewApplicationBtn" style="width: 100%;">
+            <span>VIEW MY APPLICATION</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
     </div>
 
+    <!-- Firebase Logic -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyDYqp8oNK8_efBvPsXcZB4iB0dYsxkWqyE",
@@ -335,61 +642,268 @@
         };
 
         const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
         const db = getFirestore(app);
 
-        const visaForm = document.getElementById('visaForm');
+        const LOCAL_STORAGE_KEY = "visa_app_saved_data";
+        let currentUser = null;
+        let isEditMode = false;
+
+        // عناصر الواجهة
         const formContainer = document.getElementById('formContainer');
+        const reviewContainer = document.getElementById('reviewContainer');
         const successMessage = document.getElementById('success-message');
+        const visaForm = document.getElementById('visaForm');
         const submitBtn = document.getElementById('submitBtn');
-        // عند الضغط على زر الإرسال
+        const submitBtnText = document.getElementById('submitBtnText');
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        const editBtn = document.getElementById('editBtn');
+        const viewApplicationBtn = document.getElementById('viewApplicationBtn');
+        const formHeaderTitle = document.getElementById('formHeaderTitle');
+        const phoneNumberInput = document.getElementById('phoneNumberInput');
+        const dobYear = document.getElementById('dobYear');
+        const successAppId = document.getElementById('successAppId');
+        const copyIdBtn = document.getElementById('copyIdBtn');
+        const copyBtnText = document.getElementById('copyBtnText');
+        const updateNotice = document.getElementById('updateNotice');
+
+        // عناصر القائمة المخصصة لرمز الدولة
+        const customCountrySelect = document.getElementById('customCountrySelect');
+        const selectTrigger = document.getElementById('selectTrigger');
+        const customOptions = document.getElementById('customOptions');
+        const currentFlag = document.getElementById('currentFlag');
+        const currentCode = document.getElementById('currentCode');
+        const phoneCountryCode = document.getElementById('phoneCountryCode');
+
+        // فتح وإغلاق قائمة الدولة
+        selectTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            customCountrySelect.classList.toggle('open');
+        });
+
+        // اختيار رمز الدولة
+        customOptions.querySelectorAll('.custom-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                const code = option.getAttribute('data-code');
+                const flag = option.getAttribute('data-flag');
+                setCountryCode(code, flag);
+                customCountrySelect.classList.remove('open');
+            });
+        });
+
+        // إغلاق القائمة عند الضغط في أي مكان خارجي
+        document.addEventListener('click', (e) => {
+            if (!customCountrySelect.contains(e.target)) {
+                customCountrySelect.classList.remove('open');
+            }
+        });
+
+        function setCountryCode(code, flag) {
+            phoneCountryCode.value = code;
+            currentCode.innerText = code;
+            currentFlag.src = `https://flagcdn.com/${flag}.svg`;
+        }
+
+        // حذف الصفر في بداية رقم الهاتف
+        phoneNumberInput.addEventListener('blur', () => {
+            let val = phoneNumberInput.value.trim();
+            while (val.startsWith('0')) {
+                val = val.substring(1);
+            }
+            phoneNumberInput.value = val;
+        });
+
+        // منع إدخال غير الأرقام في حقل السنة
+        dobYear.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        });
+
+        // نسخ رقم الطلب
+        copyIdBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(successAppId.innerText).then(() => {
+                copyBtnText.innerText = "Copied!";
+                setTimeout(() => { copyBtnText.innerText = "Copy ID"; }, 2000);
+            });
+        });
+
+        // المصادقة المجهولة
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                currentUser = user;
+                checkUserExistingData();
+            } else {
+                try {
+                    const cred = await signInAnonymously(auth);
+                    currentUser = cred.user;
+                    checkUserExistingData();
+                } catch (err) {
+                    console.error("Auth error:", err);
+                    checkUserExistingData();
+                }
+            }
+        });
+
+        function checkUserExistingData() {
+            const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+            if (savedData) {
+                renderReviewCard(JSON.parse(savedData));
+            } else {
+                showFormView();
+            }
+        }
+
+        function renderReviewCard(data, showUpdatedMsg = false) {
+            document.getElementById('revAppId').innerText = data.appId || 'N/A';
+            document.getElementById('revFullName').innerText = `${data.name} ${data.lastName}`;
+            document.getElementById('revEmail').innerText = data.email || 'N/A';
+            document.getElementById('revPhone').innerText = `${data.phoneCountryCode || ''} ${data.phoneNumber}`;
+            document.getElementById('revDob').innerText = data.birthDate;
+            document.getElementById('revNationality').innerText = `${data.currentNationality} (Original: ${data.originalNationality})`;
+            document.getElementById('revProfession').innerText = data.profession;
+            document.getElementById('revStatus').innerText = data.familyStatus;
+            document.getElementById('revAddress').innerText = data.address;
+
+            if (showUpdatedMsg) {
+                updateNotice.style.display = 'block';
+                setTimeout(() => { updateNotice.style.display = 'none'; }, 6000);
+            } else {
+                updateNotice.style.display = 'none';
+            }
+
+            formContainer.style.display = 'none';
+            successMessage.style.display = 'none';
+            reviewContainer.style.display = 'block';
+        }
+
+        function showFormView(populateWith = null) {
+            if (populateWith) {
+                isEditMode = true;
+                formHeaderTitle.innerText = "Edit Your Application";
+                submitBtnText.innerText = "UPDATE APPLICATION";
+                cancelEditBtn.style.display = 'flex';
+
+                visaForm.elements['sur-name'].value = populateWith.name || '';
+                visaForm.elements['last-name'].value = populateWith.lastName || '';
+                visaForm.elements['email'].value = populateWith.email || '';
+                
+                // استرجاع كود الدولة والعلم
+                const savedCode = populateWith.phoneCountryCode || '+39';
+                const matchedOption = customOptions.querySelector(`[data-code="${savedCode}"]`);
+                if (matchedOption) {
+                    setCountryCode(savedCode, matchedOption.getAttribute('data-flag'));
+                } else {
+                    setCountryCode('+39', 'it');
+                }
+
+                visaForm.elements['phone_number'].value = populateWith.phoneNumber || '';
+                visaForm.elements['dob_day'].value = populateWith.dob_day || '';
+                visaForm.elements['dob_month'].value = populateWith.dob_month || '';
+                visaForm.elements['dob_year'].value = populateWith.dob_year || '';
+                visaForm.elements['current_nationality'].value = populateWith.currentNationality || '';
+                visaForm.elements['original_nationality'].value = populateWith.originalNationality || '';
+                visaForm.elements['profession'].value = populateWith.profession || '';
+                visaForm.elements['family_status'].value = populateWith.familyStatus || '';
+                visaForm.elements['address'].value = populateWith.address || '';
+            } else {
+                isEditMode = false;
+                formHeaderTitle.innerText = "Application Form to Regularization Visa";
+                submitBtnText.innerText = "SUBMIT APPLICATION";
+                cancelEditBtn.style.display = 'none';
+                visaForm.reset();
+                setCountryCode('+39', 'it');
+            }
+
+            reviewContainer.style.display = 'none';
+            successMessage.style.display = 'none';
+            formContainer.style.display = 'block';
+        }
+
+        // زر التعديل
+        editBtn.addEventListener('click', () => {
+            const savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+            showFormView(savedData);
+        });
+
+        // زر إلغاء التعديل
+        cancelEditBtn.addEventListener('click', () => {
+            const savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+            renderReviewCard(savedData, false);
+        });
+
+        // زر الانتقال للمراجعة من شاشة الشكر
+        viewApplicationBtn.addEventListener('click', () => {
+            const savedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+            renderReviewCard(savedData, false);
+        });
+
+        // إرسال / تحديث النموذج
         visaForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // منع الصفحة من التحديث
+            e.preventDefault();
 
-            // تغيير حالة الزر أثناء الإرسال
+            let phoneVal = phoneNumberInput.value.trim();
+            while (phoneVal.startsWith('0')) {
+                phoneVal = phoneVal.substring(1);
+            }
+            phoneNumberInput.value = phoneVal;
+
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-            // جلب القيم من المدخلات
-            const name = visaForm.elements['sur-name'].value;
-            const lastName = visaForm.elements['last-name'].value;
-            const birthDay = visaForm.elements['dob_day'].value + '/' + visaForm.elements['dob_month'].value + '/' + visaForm.elements['dob_year'].value;
-            const placeOfBirth = visaForm.elements['pob'].value;
-            const currentNationality = visaForm.elements['current_nationality'].value;
-            const originalNationality = visaForm.elements['original_nationality'].value;
-            const phoneNumber = visaForm.elements['phone_number'].value;
-            const profession = visaForm.elements['profession'].value;
-            const familyStatus = visaForm.elements['family_status'].value;
-            const address = visaForm.elements['address'].value;
+            const dobDay = visaForm.elements['dob_day'].value;
+            const dobMonth = visaForm.elements['dob_month'].value;
+            const dobYearVal = visaForm.elements['dob_year'].value;
+
+            const existingData = isEditMode ? JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) : null;
+
+            const appId = isEditMode ? existingData.appId : `SAND-EXPERT-${Math.floor(100000 + Math.random() * 900000)}`;
+            const docId = isEditMode ? existingData.docId : `APP_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+
+            const formData = {
+                docId: docId,
+                appId: appId,
+                uid: currentUser ? currentUser.uid : "anonymous",
+                name: visaForm.elements['sur-name'].value,
+                lastName: visaForm.elements['last-name'].value,
+                email: visaForm.elements['email'].value,
+                phoneCountryCode: phoneCountryCode.value,
+                phoneNumber: phoneVal,
+                birthDate: `${dobDay}/${dobMonth}/${dobYearVal}`,
+                dob_day: dobDay,
+                dob_month: dobMonth,
+                dob_year: dobYearVal,
+                currentNationality: visaForm.elements['current_nationality'].value,
+                originalNationality: visaForm.elements['original_nationality'].value,
+                profession: visaForm.elements['profession'].value,
+                familyStatus: visaForm.elements['family_status'].value,
+                address: visaForm.elements['address'].value,
+                updatedAt: new Date().toISOString()
+            };
 
             try {
+                const docRef = doc(db, "messages", docId);
+                await setDoc(docRef, formData, { merge: true });
 
-                // إرسال البيانات إلى مجموعة (Collection) اسمها "messages"
-                await addDoc(collection(db, "messages"), {
-                    name: name,
-                    lastName: lastName,
-                    birthDate: birthDay,
-                    placeOfBirth: placeOfBirth,
-                    currentNationality: currentNationality,
-                    originalNationality: originalNationality,
-                    phoneNumber: phoneNumber,
-                    profession: profession,
-                    familyStatus: familyStatus,
-                    address: address,
-                    timestamp: new Date() // تسجيل وقت الإرسال
-                });
+                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(formData));
 
-                formContainer.style.display = 'none';
-                successMessage.style.display = 'block';
-                visaForm.reset(); // تفريغ الفورم
+                if (isEditMode) {
+                    // في حال التعديل: الذهاب لبطاقة المراجعة مع رسالة النجاح مباشرة
+                    renderReviewCard(formData, true);
+                } else {
+                    // في حال طلب جديد: الذهاب لصفحة الشكر
+                    successAppId.innerText = appId;
+                    formContainer.style.display = 'none';
+                    successMessage.style.display = 'block';
+                }
+
             } catch (error) {
-                console.error("Error adding document: ", error);
-                alert("حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقاً.");
+                console.error("Firebase save error:", error);
+                alert("حدث خطأ أثناء حفظ البيانات، يرجى المحاولة مرة أخرى.");
+            } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span>SUBMIT APPLICATION</span> <i class="fas fa-paper-plane"></i>';
+                submitBtn.innerHTML = `<span>${isEditMode ? 'UPDATE APPLICATION' : 'SUBMIT APPLICATION'}</span>`;
             }
         });
     </script>
 </body>
-
 
 </html>
