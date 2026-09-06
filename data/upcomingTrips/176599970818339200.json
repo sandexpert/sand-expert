@@ -1,13 +1,13 @@
 {
   "title": "4x4 off-road driving tour program In the Algerian desert 🇩🇿",
-  "date": "2026-10-05",
+  "date": "2026-12-20",
   "duration": 14,
   "image": "assets/upcomingTrips_img/img20251228113117.jpg",
   "route": [
     "border gate.El Oued Alg. Tozeur Tns ",
     "Touggourt ",
     "Ouargla ",
-    "Hassi Messaoud  . TFT",
+    "Hassi Messaoud  . Tin Fue ",
     "Ain Amenas ",
     "Illizi ",
     "Ihrir Oases ",
@@ -23,21 +23,23 @@
     "Nighttime gatherings Tea or coffee brewed over embers ",
     "Visa processing at the embassy is our responsibility. ",
     "Entry and exit procedures at the border gate are the responsibility of our guide. ",
-    "Pay the entrance fee to the national park "
+    "Pay the entrance fee to the national park ",
+    "Car insurance document "
   ],
   "excludes": [
     "Visa fee ",
-    "gasoline "
+    "gasoline ",
+    "special sleeping bag "
   ],
   "itinerary": [
     {
       "itineraryDays": " Entry via the Hazoua border crossing, Tunisia, Algeria.\n\n👋 After a warm welcome, our guide will handle check-in procedures at the border gate.\n\n➡️ Then we'll head to a hotel in El Oued,\n\n📍 approximately 100 kilometers away.\n"
     },
     {
-      "itineraryDays": " We travel to:\n➡️ Touggourt\n➡️ then Hassi Messaoud\n🌙 and spend the night at the TFT Hotel\n📍 Total distance covered: 620 km"
+      "itineraryDays": " We travel to:\n➡️ Touggourt\n➡️ then Hassi Messaoud\n🌙 and spend the night at the Tin Fue Hotel\n📍 Total distance covered: 620 km"
     },
     {
-      "itineraryDays": "In the morning, we leave TFT\n🛣️ and pass through Ain Amenas,\n🏨 and spend the night at the Hadj Salah Bouamama Hotel in Illizi,\n📍 about 610 km away\n"
+      "itineraryDays": "In the morning, we leave Tin Fue \n🛣️ and pass through Ain Amenas,\n🏨 and spend the night at the Hadj Salah Bouamama Hotel in Illizi,\n📍 about 610 km away\n"
     },
     {
       "itineraryDays": "🏔️ We begin our exploration of the Tassili N'Ajjer Mountains,\n📍 starting from the village of Bordj El Haouas.\n\n🏜️ Then we enter the Erg Admer dunes\n⛺ and camp there. Distance covered: about 350 km\n"
