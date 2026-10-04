@@ -858,9 +858,17 @@
             const appId = isEditMode ? existingData.appId : `SAND-EXPERT-${Math.floor(100000 + Math.random() * 900000)}`;
             const docId = isEditMode ? existingData.docId : `APP_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
 
+            // استخراج معرف المجموعة g من كويري الرابط (مثلاً ?g=004-2026)
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlGroupId = urlParams.get('g') || '';
+
+            // في وضع التعديل يتم تثبيت قيمة groupId المسجلة سابقاً وتجاهل أي تغيير من الرابط
+            const finalGroupId = (isEditMode && existingData && existingData.groupId) ? existingData.groupId : urlGroupId;
+
             const formData = {
                 docId: docId,
                 appId: appId,
+                groupId: finalGroupId,
                 uid: currentUser ? currentUser.uid : "anonymous",
                 name: visaForm.elements['sur-name'].value,
                 lastName: visaForm.elements['last-name'].value,
