@@ -490,7 +490,7 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <input type="text" name="dob_year" id="dobYear" class="notranslate" translate="no" required placeholder="YYYY" 
+                    <input type="text" name="dob_year" id="dobYear" class="notranslate" translate="no" required placeholder="Year" 
                            maxlength="4" minlength="4" inputmode="numeric" pattern="[0-9]{4}" 
                            title="Please enter a valid 4-digit year" style="flex:1.4;">
                 </div>
@@ -520,6 +520,16 @@
                     <option value="Married">Married</option>
                     <option value="Divorced">Divorced</option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label>Date of Entry to Algeria</label>
+                <input type="date" name="entry_date" id="entryDate" class="notranslate" translate="no" required>
+            </div>
+
+            <div class="form-group">
+                <label>Date of Exit from Algeria</label>
+                <input type="date" name="exit_date" id="exitDate" class="notranslate" translate="no" required>
             </div>
 
             <div class="form-group full-width">
@@ -585,6 +595,14 @@
             <div class="review-item">
                 <span class="review-label">Family Status</span>
                 <span class="review-value notranslate notranslate" translate="no" id="revStatus">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Date of Entry to Algeria</span>
+                <span class="review-value notranslate" translate="no" id="revEntryDate">---</span>
+            </div>
+            <div class="review-item">
+                <span class="review-label">Date of Exit from Algeria</span>
+                <span class="review-value notranslate" translate="no" id="revExitDate">---</span>
             </div>
             <div class="review-item full">
                 <span class="review-label">Address</span>
@@ -743,6 +761,41 @@
             }
         });
 
+        // ===== تاريخ الدخول / الخروج من الجزائر =====
+        const entryDateInput = document.getElementById('entryDate');
+        const exitDateInput = document.getElementById('exitDate');
+
+        // تاريخ اليوم بالتوقيت المحلي بصيغة YYYY-MM-DD
+        function getTodayLocal() {
+            const d = new Date();
+            const pad = (n) => String(n).padStart(2, '0');
+            return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+        }
+
+        // عرض التاريخ بصيغة DD/MM/YYYY
+        function formatDisplayDate(iso) {
+            if (!iso) return 'N/A';
+            const [y, m, d] = iso.split('-');
+            return `${d}/${m}/${y}`;
+        }
+
+        // القيمة الافتراضية = اليوم، ولا يمكن أن يكون الخروج قبل الدخول
+        function setDefaultTravelDates() {
+            const today = getTodayLocal();
+            entryDateInput.value = today;
+            exitDateInput.value = today;
+            exitDateInput.min = today;
+        }
+
+        entryDateInput.addEventListener('change', () => {
+            exitDateInput.min = entryDateInput.value || '';
+            if (entryDateInput.value && exitDateInput.value && exitDateInput.value < entryDateInput.value) {
+                exitDateInput.value = entryDateInput.value;
+            }
+        });
+
+        setDefaultTravelDates();
+
         function checkUserExistingData() {
             const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
             if (savedData) {
@@ -762,6 +815,8 @@
             document.getElementById('revProfession').innerText = data.profession;
             document.getElementById('revStatus').innerText = data.familyStatus;
             document.getElementById('revAddress').innerText = data.address;
+            document.getElementById('revEntryDate').innerText = formatDisplayDate(data.entryDate);
+            document.getElementById('revExitDate').innerText = formatDisplayDate(data.exitDate);
 
             if (showUpdatedMsg) {
                 updateNotice.style.display = 'block';
@@ -804,12 +859,16 @@
                 visaForm.elements['profession'].value = populateWith.profession || '';
                 visaForm.elements['family_status'].value = populateWith.familyStatus || '';
                 visaForm.elements['address'].value = populateWith.address || '';
+                visaForm.elements['entry_date'].value = populateWith.entryDate || getTodayLocal();
+                visaForm.elements['exit_date'].value = populateWith.exitDate || getTodayLocal();
+                exitDateInput.min = visaForm.elements['entry_date'].value;
             } else {
                 isEditMode = false;
                 formHeaderTitle.innerText = "Application Form to Regularization Visa";
                 submitBtnText.innerText = "SUBMIT APPLICATION";
                 cancelEditBtn.style.display = 'none';
                 visaForm.reset();
+                setDefaultTravelDates();
                 setCountryCode('+39', 'it');
             }
 
@@ -884,6 +943,8 @@
                 profession: visaForm.elements['profession'].value,
                 familyStatus: visaForm.elements['family_status'].value,
                 address: visaForm.elements['address'].value,
+                entryDate: visaForm.elements['entry_date'].value,
+                exitDate: visaForm.elements['exit_date'].value,
                 updatedAt: new Date().toISOString()
             };
 
